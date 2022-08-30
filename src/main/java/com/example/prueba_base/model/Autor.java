@@ -9,7 +9,7 @@ import java.io.Serializable;
 @Entity
 @Table(name = "autor")
 public class Autor implements Serializable {
-
+    //Myrian
     private static final long serialVersionUID = 1L;
 
     @Id
