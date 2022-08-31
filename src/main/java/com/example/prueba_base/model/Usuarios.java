@@ -26,4 +26,43 @@ public class Usuarios implements Serializable {
     @Column(name = "observaciones")
     private String observaciones;
 
+	public Integer getIdUsuario() {
+		return idUsuario;
+	}
+
+	public void setIdUsuario(Integer idUsuario) {
+		this.idUsuario = idUsuario;
+	}
+
+	public Integer getIdPersona() {
+		return idPersona;
+	}
+
+	public void setIdPersona(Integer idPersona) {
+		this.idPersona = idPersona;
+	}
+
+	public Integer getCalificacion() {
+		return calificacion;
+	}
+
+	public void setCalificacion(Integer calificacion) {
+		this.calificacion = calificacion;
+	}
+
+	public String getObservaciones() {
+		return observaciones;
+	}
+
+	public void setObservaciones(String observaciones) {
+		this.observaciones = observaciones;
+	}
+
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+    
+    
+    
+
 }

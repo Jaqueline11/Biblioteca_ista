@@ -20,4 +20,25 @@ public class Autor implements Serializable {
     @Column(name = "nombre")
     private String nombre;
 
+	public Integer getIdAutor() {
+		return idAutor;
+	}
+
+	public void setIdAutor(Integer idAutor) {
+		this.idAutor = idAutor;
+	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+    
+    
 }
