@@ -1,6 +1,7 @@
 package com.example.prueba_base.services;
 
 import com.example.prueba_base.model.Libro;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 

@@ -14,7 +14,7 @@ public class Libro implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @Id
-    @Column(name = "id_libro", nullable = false)
+    @Column(name = "id_libro")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idLibro;
 
@@ -93,4 +93,211 @@ public class Libro implements Serializable {
     @Column(name = "documento_donacion")
     private byte[] documentoDonacion;
 
+    public Integer getIdLibro() {
+        return idLibro;
+    }
+
+    public void setIdLibro(Integer idLibro) {
+        this.idLibro = idLibro;
+    }
+
+    public String getCodigoDewey() {
+        return codigoDewey;
+    }
+
+    public void setCodigoDewey(String codigoDewey) {
+        this.codigoDewey = codigoDewey;
+    }
+
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+
+    public Integer getIdTipo() {
+        return idTipo;
+    }
+
+    public void setIdTipo(Integer idTipo) {
+        this.idTipo = idTipo;
+    }
+
+    public String getAdquisicion() {
+        return adquisicion;
+    }
+
+    public void setAdquisicion(String adquisicion) {
+        this.adquisicion = adquisicion;
+    }
+
+    public Integer getAnioPublicacion() {
+        return anioPublicacion;
+    }
+
+    public void setAnioPublicacion(Integer anioPublicacion) {
+        this.anioPublicacion = anioPublicacion;
+    }
+
+    public String getEditor() {
+        return editor;
+    }
+
+    public void setEditor(String editor) {
+        this.editor = editor;
+    }
+
+    public String getCiudad() {
+        return ciudad;
+    }
+
+    public void setCiudad(String ciudad) {
+        this.ciudad = ciudad;
+    }
+
+    public String getNumPaginas() {
+        return numPaginas;
+    }
+
+    public void setNumPaginas(String numPaginas) {
+        this.numPaginas = numPaginas;
+    }
+
+    public String getArea() {
+        return area;
+    }
+
+    public void setArea(String area) {
+        this.area = area;
+    }
+
+    public String getCodIsbn() {
+        return codIsbn;
+    }
+
+    public void setCodIsbn(String codIsbn) {
+        this.codIsbn = codIsbn;
+    }
+
+    public String getIdioma() {
+        return idioma;
+    }
+
+    public void setIdioma(String idioma) {
+        this.idioma = idioma;
+    }
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
+
+    public String getDimensiones() {
+        return dimensiones;
+    }
+
+    public void setDimensiones(String dimensiones) {
+        this.dimensiones = dimensiones;
+    }
+
+    public String getEstadoLibro() {
+        return estadoLibro;
+    }
+
+    public void setEstadoLibro(String estadoLibro) {
+        this.estadoLibro = estadoLibro;
+    }
+
+    public Integer getActivo() {
+        return activo;
+    }
+
+    public void setActivo(Integer activo) {
+        this.activo = activo;
+    }
+
+    public byte[] getImagen() {
+        return imagen;
+    }
+
+    public void setImagen(byte[] imagen) {
+        this.imagen = imagen;
+    }
+
+    public String getUrlDigital() {
+        return urlDigital;
+    }
+
+    public void setUrlDigital(String urlDigital) {
+        this.urlDigital = urlDigital;
+    }
+
+    public Integer getIdBibliotecario() {
+        return idBibliotecario;
+    }
+
+    public void setIdBibliotecario(Integer idBibliotecario) {
+        this.idBibliotecario = idBibliotecario;
+    }
+
+    public Date getFechaCreacion() {
+        return fechaCreacion;
+    }
+
+    public void setFechaCreacion(Date fechaCreacion) {
+        this.fechaCreacion = fechaCreacion;
+    }
+
+    public Integer getDisponibilidad() {
+        return disponibilidad;
+    }
+
+    public void setDisponibilidad(Integer disponibilidad) {
+        this.disponibilidad = disponibilidad;
+    }
+
+    public String getIndiceUno() {
+        return indiceUno;
+    }
+
+    public void setIndiceUno(String indiceUno) {
+        this.indiceUno = indiceUno;
+    }
+
+    public String getIndiceDos() {
+        return indiceDos;
+    }
+
+    public void setIndiceDos(String indiceDos) {
+        this.indiceDos = indiceDos;
+    }
+
+    public String getIndiceTres() {
+        return indiceTres;
+    }
+
+    public void setIndiceTres(String indiceTres) {
+        this.indiceTres = indiceTres;
+    }
+
+    public String getNombreDonante() {
+        return nombreDonante;
+    }
+
+    public void setNombreDonante(String nombreDonante) {
+        this.nombreDonante = nombreDonante;
+    }
+
+    public byte[] getDocumentoDonacion() {
+        return documentoDonacion;
+    }
+
+    public void setDocumentoDonacion(byte[] documentoDonacion) {
+        this.documentoDonacion = documentoDonacion;
+    }
 }

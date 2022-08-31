@@ -3,10 +3,12 @@ package com.example.prueba_base.services;
 import com.example.prueba_base.model.Libro;
 import com.example.prueba_base.models.dao.ILibroDao;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
+@Service
 public class LibroServiceImp implements ILibroService{
     @Autowired
     //Declaro el atributo del Dao
