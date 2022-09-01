@@ -14,7 +14,7 @@ public class HistorialLibro implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_historial_libro", nullable = false)
+    @Column(name = "id_historial_libro")
     private Integer idHistorialLibro;
 
     @Column(name = "id_libro")
@@ -22,5 +22,31 @@ public class HistorialLibro implements Serializable {
 
     @Column(name = "id_bibliotecario")
     private Integer idBibliotecario;
+
+	public Integer getIdHistorialLibro() {
+		return idHistorialLibro;
+	}
+
+	public void setIdHistorialLibro(Integer idHistorialLibro) {
+		this.idHistorialLibro = idHistorialLibro;
+	}
+
+	public Integer getIdLibro() {
+		return idLibro;
+	}
+
+	public void setIdLibro(Integer idLibro) {
+		this.idLibro = idLibro;
+	}
+
+	public Integer getIdBibliotecario() {
+		return idBibliotecario;
+	}
+
+	public void setIdBibliotecario(Integer idBibliotecario) {
+		this.idBibliotecario = idBibliotecario;
+	}
+    
+   
 
 }
