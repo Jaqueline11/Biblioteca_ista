@@ -16,11 +16,11 @@ public class AutorLibro implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @Id
-    @Column(name = "id_libro", nullable = false)
+    @Column(name = "id_libro")
     private Integer idLibro;
 
     @Id
-    @Column(name = "id_autor", nullable = false)
+    @Column(name = "id_autor")
     private Integer idAutor;
 
 }

@@ -13,7 +13,7 @@ public class Autor implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @Id
-    @Column(name = "id_autor", nullable = false)
+    @Column(name = "id_autor")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idAutor;
 
