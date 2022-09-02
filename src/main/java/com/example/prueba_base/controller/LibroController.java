@@ -65,7 +65,11 @@ public class LibroController {
         return libroService.save(libroactual);
     }
 
-
+    @DeleteMapping("/eliminarlibro/{id}")
+    @ResponseStatus(HttpStatus.CREATED)
+    public void eliminar(@PathVariable int id){
+        libroService.delete(id);
+    }
 
 
 }
