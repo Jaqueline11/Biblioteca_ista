@@ -33,4 +33,57 @@ public class Bibliotecarios implements Serializable {
     @Column(name = "activo_bibliotecario")
     private Integer activoBibliotecario;
 
+	public Integer getIdBibliotecario() {
+		return idBibliotecario;
+	}
+
+	public void setIdBibliotecario(Integer idBibliotecario) {
+		this.idBibliotecario = idBibliotecario;
+	}
+
+	public Integer getIdPersona() {
+		return idPersona;
+	}
+
+	public void setIdPersona(Integer idPersona) {
+		this.idPersona = idPersona;
+	}
+
+	public Integer getRol() {
+		return rol;
+	}
+
+	public void setRol(Integer rol) {
+		this.rol = rol;
+	}
+
+	public Date getFechaInicio() {
+		return fechaInicio;
+	}
+
+	public void setFechaInicio(Date fechaInicio) {
+		this.fechaInicio = fechaInicio;
+	}
+
+	public Date getFechaFin() {
+		return fechaFin;
+	}
+
+	public void setFechaFin(Date fechaFin) {
+		this.fechaFin = fechaFin;
+	}
+
+	public Integer getActivoBibliotecario() {
+		return activoBibliotecario;
+	}
+
+	public void setActivoBibliotecario(Integer activoBibliotecario) {
+		this.activoBibliotecario = activoBibliotecario;
+	}
+
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+
+    
 }

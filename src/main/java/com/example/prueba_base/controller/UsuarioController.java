@@ -42,7 +42,11 @@ public class UsuarioController {
         return usuarioService.save(usuarioactual);
     }
 
-
+    @DeleteMapping("/eliminarusuario/{id}")
+    @ResponseStatus(HttpStatus.CREATED)
+    public void eliminar(@PathVariable int id){
+        usuarioService.delete(id);
+    }
 
 
 }

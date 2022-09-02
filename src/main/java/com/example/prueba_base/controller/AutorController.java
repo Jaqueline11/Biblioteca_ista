@@ -39,7 +39,11 @@ public class AutorController {
         return autorService.save(autoractual);
     }
 
-
+    @DeleteMapping("/eliminarautor/{id}")
+    @ResponseStatus(HttpStatus.CREATED)
+    public void eliminar(@PathVariable int id){
+        autorService.delete(id);
+    }
 
 
 }
