@@ -35,7 +35,7 @@ public class UsuarioController {
     @ResponseStatus(HttpStatus.CREATED)
     public Usuarios editar(@RequestBody Usuarios usuario, @PathVariable Integer id){
         Usuarios usuarioactual=usuarioService.findById(id);
-        usuarioactual.setIdPersona(usuario.getIdPersona());
+        usuarioactual.setPersona(usuario.getPersona());
         usuarioactual.setCalificacion(usuario.getCalificacion());
         usuarioactual.setObservaciones(usuario.getObservaciones());
 

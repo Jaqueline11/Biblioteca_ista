@@ -5,6 +5,7 @@ import lombok.Data;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 @Data
 @Entity
@@ -24,8 +25,9 @@ public class Libro implements Serializable {
     @Column(name = "titulo")
     private String titulo;
 
-    @Column(name = "id_tipo")
-    private Integer idTipo;
+    @ManyToOne
+    @JoinColumn(name = "id_tipo",referencedColumnName = "id_tipo")
+    private Tipo tipo;
 
     @Column(name = "adquisicion")
     private String adquisicion;
@@ -61,22 +63,23 @@ public class Libro implements Serializable {
     private String estadoLibro;
 
     @Column(name = "activo")
-    private Integer activo;
+    private Boolean activo;
 
     @Column(name = "imagen")
     private byte[] imagen;
 
     @Column(name = "url_digital")
     private String urlDigital;
-
-    @Column(name = "id_bibliotecario")
-    private Integer idBibliotecario;
+    
+    @ManyToOne
+    @JoinColumn(name = "id_bibliotecario",referencedColumnName = "id_bibliotecario")
+    private Bibliotecarios bibliotecario;
 
     @Column(name = "fecha_creacion")
     private Date fechaCreacion;
 
     @Column(name = "disponibilidad")
-    private Integer disponibilidad;
+    private Boolean disponibilidad;
 
     @Column(name = "indice_uno")
     private String indiceUno;
@@ -92,6 +95,17 @@ public class Libro implements Serializable {
 
     @Column(name = "documento_donacion")
     private byte[] documentoDonacion;
+   
+    
+    
+    
+    @OneToMany(mappedBy = "libro")
+    private List<Prestamo> prestamo;
+    
+    @OneToMany(mappedBy = "libro")
+    private List<AutorLibro> autores;
+    
+    
 
     public Integer getIdLibro() {
         return idLibro;
@@ -117,15 +131,20 @@ public class Libro implements Serializable {
         this.titulo = titulo;
     }
 
-    public Integer getIdTipo() {
-        return idTipo;
-    }
 
-    public void setIdTipo(Integer idTipo) {
-        this.idTipo = idTipo;
-    }
+    public Tipo getTipo() {
+		return tipo;
+	}
 
-    public String getAdquisicion() {
+	public void setTipo(Tipo tipo) {
+		this.tipo = tipo;
+	}
+
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+
+	public String getAdquisicion() {
         return adquisicion;
     }
 
@@ -213,11 +232,11 @@ public class Libro implements Serializable {
         this.estadoLibro = estadoLibro;
     }
 
-    public Integer getActivo() {
+    public Boolean getActivo() {
         return activo;
     }
 
-    public void setActivo(Integer activo) {
+    public void setActivo(Boolean activo) {
         this.activo = activo;
     }
 
@@ -237,13 +256,14 @@ public class Libro implements Serializable {
         this.urlDigital = urlDigital;
     }
 
-    public Integer getIdBibliotecario() {
-        return idBibliotecario;
-    }
 
-    public void setIdBibliotecario(Integer idBibliotecario) {
-        this.idBibliotecario = idBibliotecario;
-    }
+    public Bibliotecarios getBibliotecario() {
+		return bibliotecario;
+	}
+
+	public void setBibliotecario(Bibliotecarios bibliotecario) {
+		this.bibliotecario = bibliotecario;
+	}
 
     public Date getFechaCreacion() {
         return fechaCreacion;
@@ -253,11 +273,11 @@ public class Libro implements Serializable {
         this.fechaCreacion = fechaCreacion;
     }
 
-    public Integer getDisponibilidad() {
+    public Boolean getDisponibilidad() {
         return disponibilidad;
     }
 
-    public void setDisponibilidad(Integer disponibilidad) {
+    public void setDisponibilidad(Boolean disponibilidad) {
         this.disponibilidad = disponibilidad;
     }
 
@@ -300,4 +320,24 @@ public class Libro implements Serializable {
     public void setDocumentoDonacion(byte[] documentoDonacion) {
         this.documentoDonacion = documentoDonacion;
     }
+
+	public List<Prestamo> getPrestamo() {
+		return prestamo;
+	}
+
+	public void setPrestamo(List<Prestamo> prestamo) {
+		this.prestamo = prestamo;
+	}
+
+	public List<AutorLibro> getAutores() {
+		return autores;
+	}
+
+	public void setAutores(List<AutorLibro> autores) {
+		this.autores = autores;
+	}
+	
+	
+    
+    
 }

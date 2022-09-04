@@ -36,7 +36,13 @@ public class Persona implements Serializable {
     private String celular;
 
     @Column(name = "activo")
-    private Integer activo;
+    private Boolean activo;
+    
+    @OneToOne(mappedBy = "persona")
+    private Usuarios usu;
+    
+    @OneToOne(mappedBy = "persona")
+    private Bibliotecarios bib;
 
 	public Integer getIdPersona() {
 		return idPersona;
@@ -94,18 +100,31 @@ public class Persona implements Serializable {
 		this.celular = celular;
 	}
 
-	public Integer getActivo() {
+	public Boolean getActivo() {
 		return activo;
 	}
 
-	public void setActivo(Integer activo) {
+	public void setActivo(Boolean activo) {
 		this.activo = activo;
 	}
 
-	public static long getSerialversionuid() {
-		return serialVersionUID;
+	public Usuarios getUsu() {
+		return usu;
 	}
-    
+
+	public void setUsu(Usuarios usu) {
+		this.usu = usu;
+	}
+
+	public Bibliotecarios getBib() {
+		return bib;
+	}
+
+	public void setBib(Bibliotecarios bib) {
+		this.bib = bib;
+	}
+
+
     
 
 }

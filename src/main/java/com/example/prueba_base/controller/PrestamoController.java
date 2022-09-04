@@ -48,14 +48,14 @@ public class PrestamoController {
 	@ResponseStatus(HttpStatus.CREATED)
 	public Prestamo editar(@RequestBody Prestamo prestamo, @PathVariable int id){
 		Prestamo prestamoactual=prestamoservice.findById(id);
-		prestamoactual.setIdUsuario(prestamo.getIdUsuario());
-		prestamoactual.setIdLibro(prestamo.getIdLibro());
+		prestamoactual.setUsuario(prestamo.getUsuario());
+		prestamoactual.setLibro(prestamo.getLibro());
 		prestamoactual.setEstadoPrestamo(prestamo.getEstadoPrestamo());
 		prestamoactual.setFechaEntrega(prestamo.getFechaEntrega());
-		prestamoactual.setIdBibliotecarioEntrega(prestamo.getIdBibliotecarioEntrega());
+		prestamoactual.setBibliotecario_entrega(prestamo.getBibliotecario_entrega());
 		prestamoactual.setDocumentoHabilitante(prestamo.getDocumentoHabilitante());
 		prestamoactual.setFechaRecibido(prestamo.getFechaRecibido());
-		prestamoactual.setIdBibliotecarioRecibido(prestamo.getIdBibliotecarioRecibido());
+		prestamoactual.setBibliotecario_recibido(prestamo.getBibliotecario_recibido());
 		prestamoactual.setFechaMaxima(prestamo.getFechaMaxima());
 		prestamoactual.setActivo(prestamo.getActivo());
 		prestamoactual.setEscaneoMatriz(prestamo.getEscaneoMatriz());

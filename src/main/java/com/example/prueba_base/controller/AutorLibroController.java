@@ -35,7 +35,8 @@ public class AutorLibroController {
     @ResponseStatus(HttpStatus.CREATED)
     public AutorLibro editar(@RequestBody AutorLibro autorlibro, @PathVariable Integer id){
         AutorLibro autorlibroactual=autorlibroService.findById(id);
-        autorlibroactual.setIdAutor(autorlibro.getIdAutor());
+        autorlibroactual.setAutor(autorlibro.getAutor());
+        autorlibroactual.setLibro(autorlibro.getLibro());
     
         return autorlibroService.save(autorlibroactual);
     }

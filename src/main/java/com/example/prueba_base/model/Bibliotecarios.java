@@ -5,6 +5,7 @@ import lombok.Data;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 @Data
 @Entity
@@ -18,8 +19,9 @@ public class Bibliotecarios implements Serializable {
     @Column(name = "id_bibliotecario", nullable = false)
     private Integer idBibliotecario;
 
-    @Column(name = "id_persona")
-    private Integer idPersona;
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "id_persona",referencedColumnName = "id_persona")
+    private Persona persona;
 
     @Column(name = "rol")
     private Integer rol;
@@ -31,7 +33,18 @@ public class Bibliotecarios implements Serializable {
     private Date fechaFin;
 
     @Column(name = "activo_bibliotecario")
-    private Integer activoBibliotecario;
+    private Boolean activoBibliotecario;    
+    
+    
+    @OneToMany(mappedBy = "bibliotecario_entrega")
+    private List<Prestamo> prestamos_ent;
+    
+    @OneToMany(mappedBy = "bibliotecario_recibido")
+    private List<Prestamo> prestamos_rec;
+    
+    @OneToMany(mappedBy = "bibliotecario")
+    private List<Libro> libros;
+    
 
 	public Integer getIdBibliotecario() {
 		return idBibliotecario;
@@ -41,12 +54,12 @@ public class Bibliotecarios implements Serializable {
 		this.idBibliotecario = idBibliotecario;
 	}
 
-	public Integer getIdPersona() {
-		return idPersona;
+	public Persona get_persona() {
+		return persona;
 	}
 
-	public void setIdPersona(Integer idPersona) {
-		this.idPersona = idPersona;
+	public void set_persona(Persona b_persona) {
+		this.persona = b_persona;
 	}
 
 	public Integer getRol() {
@@ -73,17 +86,44 @@ public class Bibliotecarios implements Serializable {
 		this.fechaFin = fechaFin;
 	}
 
-	public Integer getActivoBibliotecario() {
+	public Boolean getActivoBibliotecario() {
 		return activoBibliotecario;
 	}
 
-	public void setActivoBibliotecario(Integer activoBibliotecario) {
+	public void setActivoBibliotecario(Boolean activoBibliotecario) {
 		this.activoBibliotecario = activoBibliotecario;
 	}
 
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}
+
+
+	public List<Prestamo> getPrestamos_ent() {
+		return prestamos_ent;
+	}
+
+	public void setPrestamos_ent(List<Prestamo> prestamos_ent) {
+		this.prestamos_ent = prestamos_ent;
+	}
+
+	public List<Prestamo> getPrestamos_rec() {
+		return prestamos_rec;
+	}
+
+	public void setPrestamos_rec(List<Prestamo> prestamos_rec) {
+		this.prestamos_rec = prestamos_rec;
+	}
+
+	public List<Libro> getLibros() {
+		return libros;
+	}
+
+	public void setLibros(List<Libro> libros) {
+		this.libros = libros;
+	}
+	
+	
 
     
 }

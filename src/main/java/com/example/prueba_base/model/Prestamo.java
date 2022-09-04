@@ -5,6 +5,9 @@ import lombok.Data;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
+import com.example.prueba_base.model.Bibliotecarios;
+import com.example.prueba_base.model.Usuarios;
+import com.example.prueba_base.model.Libro;
 
 @Data
 @Entity
@@ -17,12 +20,14 @@ public class Prestamo implements Serializable {
     @Column(name = "id_prestamo")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idPrestamo;
-
-    @Column(name = "id_usuario")
-    private Integer idUsuario;
-
-    @Column(name = "id_libro")
-    private Integer idLibro;
+    
+    @ManyToOne
+    @JoinColumn(name = "id_usuario",referencedColumnName = "id_usuario")
+    private Usuarios usuario;
+    
+    @ManyToOne
+    @JoinColumn(name = "id_libro",referencedColumnName = "id_libro")
+    private Libro libro;
 
     @Column(name = "estado_libro")
     private String estadoLibro;
@@ -33,8 +38,9 @@ public class Prestamo implements Serializable {
     @Column(name = "fecha_entrega")
     private Date fechaEntrega;
 
-    @Column(name = "id_bibliotecario_entrega")
-    private Integer idBibliotecarioEntrega;
+    @ManyToOne
+    @JoinColumn(name = "id_bibliotecario_entrega",referencedColumnName = "id_bibliotecario")
+    private Bibliotecarios bibliotecario_entrega;
 
     @Column(name = "documento_habilitante")
     private String documentoHabilitante;
@@ -42,17 +48,21 @@ public class Prestamo implements Serializable {
     @Column(name = "fecha_recibido")
     private Date fechaRecibido;
 
-    @Column(name = "id_bibliotecario_recibido")
-    private Integer idBibliotecarioRecibido;
+    @ManyToOne
+    @JoinColumn(name = "id_bibliotecario_recibido",referencedColumnName = "id_bibliotecario")
+    private Bibliotecarios bibliotecario_recibido;
 
     @Column(name = "fecha_maxima")
     private Date fechaMaxima;
 
     @Column(name = "activo")
-    private Integer activo;
+    private Boolean activo;
 
     @Column(name = "escaneo_matriz")
     private byte[] escaneoMatriz;
+    
+    
+    
 
 	public Integer getIdPrestamo() {
 		return idPrestamo;
@@ -61,22 +71,16 @@ public class Prestamo implements Serializable {
 	public void setIdPrestamo(Integer idPrestamo) {
 		this.idPrestamo = idPrestamo;
 	}
+	
 
-	public Integer getIdUsuario() {
-		return idUsuario;
+	public Usuarios getUsuario() {
+		return usuario;
 	}
 
-	public void setIdUsuario(Integer idUsuario) {
-		this.idUsuario = idUsuario;
+	public void setUsuario(Usuarios usuario) {
+		this.usuario = usuario;
 	}
 
-	public Integer getIdLibro() {
-		return idLibro;
-	}
-
-	public void setIdLibro(Integer idLibro) {
-		this.idLibro = idLibro;
-	}
 
 	public String getEstadoLibro() {
 		return estadoLibro;
@@ -102,13 +106,6 @@ public class Prestamo implements Serializable {
 		this.fechaEntrega = fechaEntrega;
 	}
 
-	public Integer getIdBibliotecarioEntrega() {
-		return idBibliotecarioEntrega;
-	}
-
-	public void setIdBibliotecarioEntrega(Integer idBibliotecarioEntrega) {
-		this.idBibliotecarioEntrega = idBibliotecarioEntrega;
-	}
 
 	public String getDocumentoHabilitante() {
 		return documentoHabilitante;
@@ -126,13 +123,6 @@ public class Prestamo implements Serializable {
 		this.fechaRecibido = fechaRecibido;
 	}
 
-	public Integer getIdBibliotecarioRecibido() {
-		return idBibliotecarioRecibido;
-	}
-
-	public void setIdBibliotecarioRecibido(Integer idBibliotecarioRecibido) {
-		this.idBibliotecarioRecibido = idBibliotecarioRecibido;
-	}
 
 	public Date getFechaMaxima() {
 		return fechaMaxima;
@@ -142,11 +132,11 @@ public class Prestamo implements Serializable {
 		this.fechaMaxima = fechaMaxima;
 	}
 
-	public Integer getActivo() {
+	public Boolean getActivo() {
 		return activo;
 	}
 
-	public void setActivo(Integer activo) {
+	public void setActivo(Boolean activo) {
 		this.activo = activo;
 	}
 
@@ -156,6 +146,30 @@ public class Prestamo implements Serializable {
 
 	public void setEscaneoMatriz(byte[] escaneoMatriz) {
 		this.escaneoMatriz = escaneoMatriz;
+	}
+
+	public Libro getLibro() {
+		return libro;
+	}
+
+	public void setLibro(Libro libro) {
+		this.libro = libro;
+	}
+
+	public Bibliotecarios getBibliotecario_entrega() {
+		return bibliotecario_entrega;
+	}
+
+	public void setBibliotecario_entrega(Bibliotecarios blibliotecario_entrega) {
+		this.bibliotecario_entrega = blibliotecario_entrega;
+	}
+
+	public Bibliotecarios getBibliotecario_recibido() {
+		return bibliotecario_recibido;
+	}
+
+	public void setBibliotecario_recibido(Bibliotecarios bibliotecario_recibido) {
+		this.bibliotecario_recibido = bibliotecario_recibido;
 	}
     
     

@@ -4,6 +4,7 @@ import lombok.Data;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.List;
 
 @Data
 @Entity
@@ -19,6 +20,9 @@ public class Tipo implements Serializable {
 
     @Column(name = "nombre")
     private String nombre;
+    
+    @OneToMany(mappedBy = "tipo")
+    private List<Libro> libros;
 
 	public Integer getIdTipo() {
 		return idTipo;
@@ -34,6 +38,18 @@ public class Tipo implements Serializable {
 
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
+	}
+
+	public List<Libro> getLibros() {
+		return libros;
+	}
+
+	public void setLibros(List<Libro> libros) {
+		this.libros = libros;
+	}
+
+	public static long getSerialversionuid() {
+		return serialVersionUID;
 	}
     
     

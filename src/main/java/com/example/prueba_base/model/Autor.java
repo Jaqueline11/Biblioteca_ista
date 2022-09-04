@@ -4,6 +4,7 @@ import lombok.Data;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.List;
 
 @Data
 @Entity
@@ -19,6 +20,9 @@ public class Autor implements Serializable {
 
     @Column(name = "nombre")
     private String nombre;
+    
+    @OneToMany(mappedBy = "autor")
+    private List<AutorLibro> libros;
 
 	public Integer getIdAutor() {
 		return idAutor;
@@ -38,6 +42,14 @@ public class Autor implements Serializable {
 
 	public static long getSerialversionuid() {
 		return serialVersionUID;
+	}
+
+	public List<AutorLibro> getLibros() {
+		return libros;
+	}
+
+	public void setLibros(List<AutorLibro> libros) {
+		this.libros = libros;
 	}
     
     

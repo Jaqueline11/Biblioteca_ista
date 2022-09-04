@@ -9,32 +9,36 @@ import java.util.Date;
 @Data
 @Entity
 @Table(name = "autorlibro")
+@IdClass(value = AutorLibroPK.class)
 public class AutorLibro implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
     @Id
-    @Column(name = "id_libro")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer idLibro;
+    @ManyToOne
+    @JoinColumn(name = "id_libro",referencedColumnName = "id_libro")
+    private Libro libro;
+    @Id
+    @ManyToOne
+    @JoinColumn(name = "id_autor",referencedColumnName = "id_autor")
+    private Autor autor; 
+    
+    
 
-    @Column(name = "id_autor")
-    private String idAutor;
-
-	public Integer getIdLibro() {
-		return idLibro;
+	public Libro getLibro() {
+		return libro;
 	}
 
-	public void setIdLibro(Integer idLibro) {
-		this.idLibro = idLibro;
+	public void setLibro(Libro libro) {
+		this.libro = libro;
 	}
 
-	public String getIdAutor() {
-		return idAutor;
+	public Autor getAutor() {
+		return autor;
 	}
 
-	public void setIdAutor(String idAutor) {
-		this.idAutor = idAutor;
+	public void setAutor(Autor autor) {
+		this.autor = autor;
 	}
 
 	public static long getSerialversionuid() {

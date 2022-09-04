@@ -37,7 +37,7 @@ public class LibroController {
         Libro libroactual=libroService.findById(id);
         libroactual.setCodigoDewey(libro.getCodigoDewey());
         libroactual.setTitulo(libro.getTitulo());
-        libroactual.setIdTipo(libro.getIdTipo());
+        libroactual.setTipo(libro.getTipo());
         libroactual.setAdquisicion(libro.getAdquisicion());
         libroactual.setAnioPublicacion(libro.getAnioPublicacion());
         libroactual.setEditor(libro.getEditor());
@@ -53,7 +53,7 @@ public class LibroController {
         libroactual.setActivo(libro.getActivo());
         libroactual.setImagen(libro.getImagen());
         libroactual.setUrlDigital(libro.getUrlDigital());
-        libroactual.setIdBibliotecario(libro.getIdBibliotecario());
+        libroactual.setBibliotecario(libro.getBibliotecario());
         libroactual.setFechaCreacion(libro.getFechaCreacion());
         libroactual.setDisponibilidad(libro.getDisponibilidad());
         libroactual.setIndiceUno(libro.getIndiceUno());
