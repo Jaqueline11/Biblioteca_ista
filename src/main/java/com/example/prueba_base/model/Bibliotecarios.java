@@ -5,7 +5,6 @@ import lombok.Data;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
-import java.util.List;
 
 @Data
 @Entity
@@ -32,22 +31,6 @@ public class Bibliotecarios implements Serializable {
     @Column(name = "activo_bibliotecario")
     private Boolean activo_bibliotecario;    
     
-    
-    @OneToMany
-    @JoinColumn(name="id_bibliotecario")
-    private List<Prestamo> prestamos_ent;
-    
-    @OneToMany
-    @JoinColumn(name="id_bibliotecario")
-    private List<Prestamo> prestamos_rec;
-    
-    @OneToMany
-    @JoinColumn(name="id_bibliotecario")
-    private List<Libro> libros;
-    
-    @OneToMany
-    @JoinColumn(name="id_bibliotecario")
-    private List<HistorialLibro> historial;
 
 	public Integer getId_bibliotecario() {
 		return id_bibliotecario;
@@ -88,35 +71,7 @@ public class Bibliotecarios implements Serializable {
 	public void setActivo_bibliotecario(Boolean activo_bibliotecario) {
 		this.activo_bibliotecario = activo_bibliotecario;
 	}
-
-	public List<Prestamo> getPrestamos_ent() {
-		return prestamos_ent;
-	}
-
-	public void setPrestamos_ent(List<Prestamo> prestamos_ent) {
-		this.prestamos_ent = prestamos_ent;
-	}
-
-	public List<Prestamo> getPrestamos_rec() {
-		return prestamos_rec;
-	}
-
-	public void setPrestamos_rec(List<Prestamo> prestamos_rec) {
-		this.prestamos_rec = prestamos_rec;
-	}
-
-	public List<Libro> getLibros() {
-		return libros;
-	}
-
-	public void setLibros(List<Libro> libros) {
-		this.libros = libros;
-	}
-    
-
-	
-	
 	
 
-    
+   
 }

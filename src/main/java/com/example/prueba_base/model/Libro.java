@@ -97,20 +97,6 @@ public class Libro implements Serializable {
     private byte[] documento_donacion;
    
     
-    
-    
-    @OneToMany
-    @JoinColumn(name="id_libro")
-    private List<Prestamo> prestamo;
-    
-    @OneToMany
-    @JoinColumn(name="id_libro")
-    private List<AutorLibro> autores;
-
-    @OneToMany
-    @JoinColumn(name="id_libro")
-    private List<HistorialLibro> historial;
-    
 	public Integer getId_libro() {
 		return id_libro;
 	}
@@ -318,27 +304,6 @@ public class Libro implements Serializable {
 	public void setDocumento_donacion(byte[] documento_donacion) {
 		this.documento_donacion = documento_donacion;
 	}
-
-	public List<Prestamo> getPrestamo() {
-		return prestamo;
-	}
-
-	public void setPrestamo(List<Prestamo> prestamo) {
-		this.prestamo = prestamo;
-	}
-
-	public List<AutorLibro> getAutores() {
-		return autores;
-	}
-
-	public void setAutores(List<AutorLibro> autores) {
-		this.autores = autores;
-	}
-    
-    
-
-   
 	
-    
     
 }

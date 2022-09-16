@@ -21,10 +21,6 @@ public class Tipo implements Serializable {
     @Column(name = "nombre")
     private String nombre;
     
-    @OneToMany
-    @JoinColumn(name="id_tipo")
-    private List<Libro> libros;
-    
     
 
 	
@@ -42,14 +38,6 @@ public class Tipo implements Serializable {
 
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
-	}
-
-	public List<Libro> getLibros() {
-		return libros;
-	}
-
-	public void setLibros(List<Libro> libros) {
-		this.libros = libros;
 	}
 
 	public static long getSerialversionuid() {

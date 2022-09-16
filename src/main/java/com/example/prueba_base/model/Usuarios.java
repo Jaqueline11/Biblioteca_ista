@@ -4,7 +4,6 @@ import lombok.Data;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.util.List;
 
 @Data
 @Entity
@@ -27,13 +26,7 @@ public class Usuarios implements Serializable {
 
     @Column(name = "observaciones")
     private String observaciones;
-    
-    @OneToMany
-    @JoinColumn(name = "id_usuario")
-    private List<Prestamo> prestamos;    
-    
-    
-
+      
 
 	public Integer getId_usuario() {
 		return id_usuario;
@@ -70,16 +63,6 @@ public class Usuarios implements Serializable {
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}
-
-	public List<Prestamo> getPrestamos() {
-		return prestamos;
-	}
-
-	public void setPrestamos(List<Prestamo> prestamos) {
-		this.prestamos = prestamos;
-	}
-    
-    
     
 
 }

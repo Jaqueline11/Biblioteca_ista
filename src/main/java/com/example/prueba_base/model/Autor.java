@@ -10,7 +10,7 @@ import java.util.List;
 @Entity
 @Table(name = "autor")
 public class Autor implements Serializable {
-    //Myrian
+    
     private static final long serialVersionUID = 1L;
 
     @Id
@@ -21,11 +21,6 @@ public class Autor implements Serializable {
     @Column(name = "nombre")
     private String nombre;
     
-    @OneToMany
-    @JoinColumn(name="id_autor")
-    private List<AutorLibro> libros;
-
-	
 
 	public Integer getId_autor() {
 		return id_autor;
@@ -47,13 +42,4 @@ public class Autor implements Serializable {
 		return serialVersionUID;
 	}
 
-	public List<AutorLibro> getLibros() {
-		return libros;
-	}
-
-	public void setLibros(List<AutorLibro> libros) {
-		this.libros = libros;
-	}
-    
-    
 }
