@@ -16,7 +16,7 @@ public class Usuarios implements Serializable {
     @Id
     @Column(name = "id_usuario")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer idUsuario;
+    private Integer id_usuario;
     
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "id_persona",referencedColumnName = "id_persona")
@@ -29,6 +29,7 @@ public class Usuarios implements Serializable {
     private String observaciones;
     
     @OneToMany(mappedBy = "usuario")
+    @JoinColumn(name = "id_usuario")
     private List<Prestamo> prestamos;    
     
 

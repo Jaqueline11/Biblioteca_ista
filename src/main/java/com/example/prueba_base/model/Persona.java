@@ -15,7 +15,7 @@ public class Persona implements Serializable {
     @Id
     @Column(name = "id_persona")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer idPersona;
+    private Integer id_persona;
 
     @Column(name = "cedula")
     private String cedula;
@@ -44,12 +44,14 @@ public class Persona implements Serializable {
     @OneToOne(mappedBy = "persona")
     private Bibliotecarios bib;
 
-	public Integer getIdPersona() {
-		return idPersona;
+    
+
+	public Integer getId_persona() {
+		return id_persona;
 	}
 
-	public void setIdPersona(Integer idPersona) {
-		this.idPersona = idPersona;
+	public void setId_persona(Integer id_persona) {
+		this.id_persona = id_persona;
 	}
 
 	public String getCedula() {
