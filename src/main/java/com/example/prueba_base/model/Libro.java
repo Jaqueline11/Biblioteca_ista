@@ -99,15 +99,15 @@ public class Libro implements Serializable {
     
     
     
-    @OneToMany(mappedBy = "libro")
+    @OneToMany
     @JoinColumn(name="id_libro")
     private List<Prestamo> prestamo;
     
-    @OneToMany(mappedBy = "libro")
+    @OneToMany
     @JoinColumn(name="id_libro")
     private List<AutorLibro> autores;
 
-    @OneToMany(mappedBy = "libro")
+    @OneToMany
     @JoinColumn(name="id_libro")
     private List<HistorialLibro> historial;
     

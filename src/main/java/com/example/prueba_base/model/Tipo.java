@@ -21,7 +21,7 @@ public class Tipo implements Serializable {
     @Column(name = "nombre")
     private String nombre;
     
-    @OneToMany(mappedBy = "tipo")
+    @OneToMany
     @JoinColumn(name="id_tipo")
     private List<Libro> libros;
     

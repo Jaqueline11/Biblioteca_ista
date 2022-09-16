@@ -33,20 +33,20 @@ public class Bibliotecarios implements Serializable {
     private Boolean activo_bibliotecario;    
     
     
-    @OneToMany(mappedBy = "bibliotecario_entrega")
+    @OneToMany
     @JoinColumn(name="id_bibliotecario")
     private List<Prestamo> prestamos_ent;
     
-    @OneToMany(mappedBy = "bibliotecario_recibido")
+    @OneToMany
     @JoinColumn(name="id_bibliotecario")
     private List<Prestamo> prestamos_rec;
     
-    @OneToMany(mappedBy = "bibliotecario")
+    @OneToMany
     @JoinColumn(name="id_bibliotecario")
     private List<Libro> libros;
     
-    @OneToMany(mappedBy = "bibliotecario")
-    @JoinColumn(name="id_libro")
+    @OneToMany
+    @JoinColumn(name="id_bibliotecario")
     private List<HistorialLibro> historial;
 
 	public Integer getId_bibliotecario() {

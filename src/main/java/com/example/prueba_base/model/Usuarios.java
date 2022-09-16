@@ -28,7 +28,7 @@ public class Usuarios implements Serializable {
     @Column(name = "observaciones")
     private String observaciones;
     
-    @OneToMany(mappedBy = "usuario")
+    @OneToMany
     @JoinColumn(name = "id_usuario")
     private List<Prestamo> prestamos;    
     
