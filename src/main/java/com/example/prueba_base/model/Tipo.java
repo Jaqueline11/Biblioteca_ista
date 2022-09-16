@@ -16,20 +16,24 @@ public class Tipo implements Serializable {
     @Id
     @Column(name = "id_tipo")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer idTipo;
+    private Integer id_tipo;
 
     @Column(name = "nombre")
     private String nombre;
     
     @OneToMany(mappedBy = "tipo")
+    @JoinColumn(name="id_tipo")
     private List<Libro> libros;
+    
+    
 
-	public Integer getIdTipo() {
-		return idTipo;
+	
+	public Integer getId_tipo() {
+		return id_tipo;
 	}
 
-	public void setIdTipo(Integer idTipo) {
-		this.idTipo = idTipo;
+	public void setId_tipo(Integer id_tipo) {
+		this.id_tipo = id_tipo;
 	}
 
 	public String getNombre() {

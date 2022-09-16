@@ -32,16 +32,16 @@ public class Usuarios implements Serializable {
     @JoinColumn(name = "id_usuario")
     private List<Prestamo> prestamos;    
     
+    
 
-	public Integer getIdUsuario() {
-		return idUsuario;
+
+	public Integer getId_usuario() {
+		return id_usuario;
 	}
 
-	public void setIdUsuario(Integer idUsuario) {
-		this.idUsuario = idUsuario;
+	public void setId_usuario(Integer id_usuario) {
+		this.id_usuario = id_usuario;
 	}
-
-
 
 	public Persona getPersona() {
 		return persona;

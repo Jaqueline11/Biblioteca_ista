@@ -41,7 +41,7 @@ public class HistorialLibroController {
 	}
 	
 	
-	@GetMapping("/verhistorial/{id}")
+	@GetMapping("/HistorialLibro/{id}")
 	public HistorialLibro findById(@PathVariable int id){
 		return historialservice.findById(id);
 	}
@@ -52,9 +52,9 @@ public class HistorialLibroController {
 	@ResponseStatus(HttpStatus.CREATED)
 	public HistorialLibro editar(@RequestBody HistorialLibro historiallibro, @PathVariable int id){
 		HistorialLibro historiaactual=historialservice.findById(id);
-		historiaactual.setIdBibliotecario(historiallibro.getIdBibliotecario());
-		historiaactual.setIdHistorialLibro(historiallibro.getIdHistorialLibro());
-		historiaactual.setIdLibro(historiallibro.getIdLibro());
+		historiaactual.setBibliotecario(historiallibro.getBibliotecario());
+		historiaactual.setId_historial_libro(historiallibro.getId_historial_libro());
+		historiaactual.setLibro(historiallibro.getLibro());
 		return historialservice.save(historiaactual);
 	}
 

@@ -4,6 +4,7 @@ import lombok.Data;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.List;
 
 @Data
 @Entity
@@ -15,37 +16,47 @@ public class HistorialLibro implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_historial_libro")
-    private Integer idHistorialLibro;
+    private Integer id_historial_libro;
 
-    @Column(name = "id_libro")
-    private Integer idLibro;
+    @ManyToOne
+    @JoinColumn(name = "id_libro",referencedColumnName = "id_libro")
+    private Libro libro;
+    
+    @ManyToOne
+    @JoinColumn(name = "id_bibliotecario",referencedColumnName = "id_bibliotecario")
+    private Bibliotecarios bibliotecario;
+    
 
-    @Column(name = "id_bibliotecario")
-    private Integer idBibliotecario;
+   
 
-	public Integer getIdHistorialLibro() {
-		return idHistorialLibro;
+	public Integer getId_historial_libro() {
+		return id_historial_libro;
 	}
 
-	public void setIdHistorialLibro(Integer idHistorialLibro) {
-		this.idHistorialLibro = idHistorialLibro;
+	public void setId_historial_libro(Integer id_historial_libro) {
+		this.id_historial_libro = id_historial_libro;
 	}
 
-	public Integer getIdLibro() {
-		return idLibro;
+	public Libro getLibro() {
+		return libro;
 	}
 
-	public void setIdLibro(Integer idLibro) {
-		this.idLibro = idLibro;
+	public void setLibro(Libro libro) {
+		this.libro = libro;
 	}
 
-	public Integer getIdBibliotecario() {
-		return idBibliotecario;
+	public Bibliotecarios getBibliotecario() {
+		return bibliotecario;
 	}
 
-	public void setIdBibliotecario(Integer idBibliotecario) {
-		this.idBibliotecario = idBibliotecario;
+	public void setBibliotecario(Bibliotecarios bibliotecario) {
+		this.bibliotecario = bibliotecario;
 	}
+	
+
+	
+	
+	
     
    
 

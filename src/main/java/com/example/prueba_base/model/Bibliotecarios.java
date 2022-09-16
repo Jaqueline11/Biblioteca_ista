@@ -17,87 +17,77 @@ public class Bibliotecarios implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_bibliotecario", nullable = false)
-    private Integer idBibliotecario;
+    private Integer id_bibliotecario;
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "id_persona",referencedColumnName = "id_persona")
     private Persona persona;
 
-    @Column(name = "rol")
-    private Integer rol;
-
     @Column(name = "fecha_inicio")
-    private Date fechaInicio;
+    private Date fecha_inicio;
 
     @Column(name = "fecha_fin")
-    private Date fechaFin;
+    private Date fecha_fin;
 
     @Column(name = "activo_bibliotecario")
-    private Boolean activoBibliotecario;    
+    private Boolean activo_bibliotecario;    
     
     
     @OneToMany(mappedBy = "bibliotecario_entrega")
+    @JoinColumn(name="id_bibliotecario")
     private List<Prestamo> prestamos_ent;
     
     @OneToMany(mappedBy = "bibliotecario_recibido")
+    @JoinColumn(name="id_bibliotecario")
     private List<Prestamo> prestamos_rec;
     
     @OneToMany(mappedBy = "bibliotecario")
+    @JoinColumn(name="id_bibliotecario")
     private List<Libro> libros;
     
+    @OneToMany(mappedBy = "bibliotecario")
+    @JoinColumn(name="id_libro")
+    private List<HistorialLibro> historial;
 
-	public Integer getIdBibliotecario() {
-		return idBibliotecario;
+	public Integer getId_bibliotecario() {
+		return id_bibliotecario;
 	}
 
-	public void setIdBibliotecario(Integer idBibliotecario) {
-		this.idBibliotecario = idBibliotecario;
+	public void setId_bibliotecario(Integer id_bibliotecario) {
+		this.id_bibliotecario = id_bibliotecario;
 	}
 
-	public Persona get_persona() {
+	public Persona getPersona() {
 		return persona;
 	}
 
-	public void set_persona(Persona b_persona) {
-		this.persona = b_persona;
+	public void setPersona(Persona persona) {
+		this.persona = persona;
 	}
 
-	public Integer getRol() {
-		return rol;
+	public Date getFecha_inicio() {
+		return fecha_inicio;
 	}
 
-	public void setRol(Integer rol) {
-		this.rol = rol;
+	public void setFecha_inicio(Date fecha_inicio) {
+		this.fecha_inicio = fecha_inicio;
 	}
 
-	public Date getFechaInicio() {
-		return fechaInicio;
+	public Date getFecha_fin() {
+		return fecha_fin;
 	}
 
-	public void setFechaInicio(Date fechaInicio) {
-		this.fechaInicio = fechaInicio;
+	public void setFecha_fin(Date fecha_fin) {
+		this.fecha_fin = fecha_fin;
 	}
 
-	public Date getFechaFin() {
-		return fechaFin;
+	public Boolean getActivo_bibliotecario() {
+		return activo_bibliotecario;
 	}
 
-	public void setFechaFin(Date fechaFin) {
-		this.fechaFin = fechaFin;
+	public void setActivo_bibliotecario(Boolean activo_bibliotecario) {
+		this.activo_bibliotecario = activo_bibliotecario;
 	}
-
-	public Boolean getActivoBibliotecario() {
-		return activoBibliotecario;
-	}
-
-	public void setActivoBibliotecario(Boolean activoBibliotecario) {
-		this.activoBibliotecario = activoBibliotecario;
-	}
-
-	public static long getSerialversionuid() {
-		return serialVersionUID;
-	}
-
 
 	public List<Prestamo> getPrestamos_ent() {
 		return prestamos_ent;
@@ -122,6 +112,9 @@ public class Bibliotecarios implements Serializable {
 	public void setLibros(List<Libro> libros) {
 		this.libros = libros;
 	}
+    
+
+	
 	
 	
 

@@ -15,7 +15,7 @@ import java.util.List;
 public class LibroController {
     @Autowired
     private ILibroService libroService;
-    @GetMapping("/listalibros")
+    @GetMapping("/listarlibros")
     public List<Libro> indext(){
         return libroService.findAll();
     }
@@ -35,32 +35,32 @@ public class LibroController {
     @ResponseStatus(HttpStatus.CREATED)
     public Libro editar(@RequestBody Libro libro, @PathVariable Integer id){
         Libro libroactual=libroService.findById(id);
-        libroactual.setCodigoDewey(libro.getCodigoDewey());
+        libroactual.setCodigo_dewey(libro.getCodigo_dewey());
         libroactual.setTitulo(libro.getTitulo());
         libroactual.setTipo(libro.getTipo());
         libroactual.setAdquisicion(libro.getAdquisicion());
-        libroactual.setAnioPublicacion(libro.getAnioPublicacion());
+        libroactual.setAnio_publicacion(libro.getAnio_publicacion());
         libroactual.setEditor(libro.getEditor());
         libroactual.setCiudad(libro.getCiudad());
-        libroactual.setNumPaginas(libro.getNumPaginas());
+        libroactual.setNum_paginas(libro.getNum_paginas());
         libroactual.setArea(libro.getArea());
-        libroactual.setCodIsbn(libro.getCodIsbn());
+        libroactual.setCod_ISBN(libro.getCod_ISBN());
         libroactual.setArea(libro.getArea());
         libroactual.setIdioma(libro.getIdioma());
         libroactual.setDescripcion(libro.getDescripcion());
         libroactual.setDimensiones(libro.getDimensiones());
-        libroactual.setEstadoLibro(libro.getEstadoLibro());
+        libroactual.setEstado_libro(libro.getEstado_libro());
         libroactual.setActivo(libro.getActivo());
         libroactual.setImagen(libro.getImagen());
-        libroactual.setUrlDigital(libro.getUrlDigital());
+        libroactual.setUrl_digital(libro.getUrl_digital());
         libroactual.setBibliotecario(libro.getBibliotecario());
-        libroactual.setFechaCreacion(libro.getFechaCreacion());
+        libroactual.setFecha_creacion(libro.getFecha_creacion());
         libroactual.setDisponibilidad(libro.getDisponibilidad());
-        libroactual.setIndiceUno(libro.getIndiceUno());
-        libroactual.setIndiceDos(libro.getIndiceDos());
-        libroactual.setIndiceTres(libro.getIndiceTres());
-        libroactual.setNombreDonante(libro.getNombreDonante());
-        libroactual.setDocumentoDonacion(libro.getDocumentoDonacion());
+        libroactual.setIndice_uno(libro.getIndice_uno());
+        libroactual.setIndice_dos(libro.getIndice_dos());
+        libroactual.setIndice_tres(libro.getIndice_tres());
+        libroactual.setNombre_donante(libro.getNombre_donante());
+        libroactual.setDocumento_donacion(libro.getDocumento_donacion());
 
         return libroService.save(libroactual);
     }

@@ -44,7 +44,19 @@ public class Persona implements Serializable {
     @OneToOne(mappedBy = "persona")
     private Bibliotecarios bib;
 
+    @Column(name = "rol")
+    private int rol;
     
+   
+    
+
+	public int getRol() {
+		return rol;
+	}
+
+	public void setRol(int rol) {
+		this.rol = rol;
+	}
 
 	public Integer getId_persona() {
 		return id_persona;

@@ -16,20 +16,23 @@ public class Autor implements Serializable {
     @Id
     @Column(name = "id_autor")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer idAutor;
+    private Integer id_autor;
 
     @Column(name = "nombre")
     private String nombre;
     
     @OneToMany(mappedBy = "autor")
+    @JoinColumn(name="id_autor")
     private List<AutorLibro> libros;
 
-	public Integer getIdAutor() {
-		return idAutor;
+	
+
+	public Integer getId_autor() {
+		return id_autor;
 	}
 
-	public void setIdAutor(Integer idAutor) {
-		this.idAutor = idAutor;
+	public void setId_autor(Integer id_autor) {
+		this.id_autor = id_autor;
 	}
 
 	public String getNombre() {

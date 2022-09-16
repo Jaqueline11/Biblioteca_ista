@@ -39,7 +39,7 @@ public class TipoController {
 	}
 	
 	
-	@GetMapping("/vertipo/{id}")
+	@GetMapping("/tipo/{id}")
 	public Tipo findById(@PathVariable int id){
 		return tiposervice.findById(id);
 	}
@@ -50,7 +50,7 @@ public class TipoController {
 	@ResponseStatus(HttpStatus.CREATED)
 	public Tipo editar(@RequestBody Tipo tipo, @PathVariable int id){
 		Tipo tipoactual=tiposervice.findById(id);
-		tipoactual.setIdTipo(tipo.getIdTipo());
+		tipoactual.setId_tipo(tipo.getId_tipo());
 		tipoactual.setNombre(tipo.getNombre());
 		return tiposervice.save(tipoactual);
 	}

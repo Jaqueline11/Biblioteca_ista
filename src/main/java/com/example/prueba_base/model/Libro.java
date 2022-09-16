@@ -17,10 +17,10 @@ public class Libro implements Serializable {
     @Id
     @Column(name = "id_libro")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer idLibro;
+    private Integer id_libro;
 
     @Column(name = "codigo_dewey")
-    private String codigoDewey;
+    private String codigo_dewey;
 
     @Column(name = "titulo")
     private String titulo;
@@ -33,7 +33,7 @@ public class Libro implements Serializable {
     private String adquisicion;
 
     @Column(name = "anio_publicacion")
-    private Integer anioPublicacion;
+    private Integer anio_publicacion;
 
     @Column(name = "editor")
     private String editor;
@@ -42,13 +42,13 @@ public class Libro implements Serializable {
     private String ciudad;
 
     @Column(name = "num_paginas")
-    private String numPaginas;
+    private String num_paginas;
 
     @Column(name = "area")
     private String area;
 
     @Column(name = "cod_ISBN")
-    private String codIsbn;
+    private String cod_ISBN;
 
     @Column(name = "idioma")
     private String idioma;
@@ -60,7 +60,7 @@ public class Libro implements Serializable {
     private String dimensiones;
 
     @Column(name = "estado_libro")
-    private String estadoLibro;
+    private String estado_libro;
 
     @Column(name = "activo")
     private Boolean activo;
@@ -69,70 +69,73 @@ public class Libro implements Serializable {
     private byte[] imagen;
 
     @Column(name = "url_digital")
-    private String urlDigital;
+    private String url_digital;
     
     @ManyToOne
     @JoinColumn(name = "id_bibliotecario",referencedColumnName = "id_bibliotecario")
     private Bibliotecarios bibliotecario;
 
     @Column(name = "fecha_creacion")
-    private Date fechaCreacion;
+    private Date fecha_creacion;
 
     @Column(name = "disponibilidad")
     private Boolean disponibilidad;
 
     @Column(name = "indice_uno")
-    private String indiceUno;
+    private String indice_uno;
 
     @Column(name = "indice_dos")
-    private String indiceDos;
+    private String indice_dos;
 
     @Column(name = "indice_tres")
-    private String indiceTres;
+    private String indice_tres;
 
     @Column(name = "nombre_donante")
-    private String nombreDonante;
+    private String nombre_donante;
 
     @Column(name = "documento_donacion")
-    private byte[] documentoDonacion;
+    private byte[] documento_donacion;
    
     
     
     
     @OneToMany(mappedBy = "libro")
+    @JoinColumn(name="id_libro")
     private List<Prestamo> prestamo;
     
     @OneToMany(mappedBy = "libro")
+    @JoinColumn(name="id_libro")
     private List<AutorLibro> autores;
+
+    @OneToMany(mappedBy = "libro")
+    @JoinColumn(name="id_libro")
+    private List<HistorialLibro> historial;
     
-    
+	public Integer getId_libro() {
+		return id_libro;
+	}
 
-    public Integer getIdLibro() {
-        return idLibro;
-    }
+	public void setId_libro(Integer id_libro) {
+		this.id_libro = id_libro;
+	}
 
-    public void setIdLibro(Integer idLibro) {
-        this.idLibro = idLibro;
-    }
+	public String getCodigo_dewey() {
+		return codigo_dewey;
+	}
 
-    public String getCodigoDewey() {
-        return codigoDewey;
-    }
+	public void setCodigo_dewey(String codigo_dewey) {
+		this.codigo_dewey = codigo_dewey;
+	}
 
-    public void setCodigoDewey(String codigoDewey) {
-        this.codigoDewey = codigoDewey;
-    }
+	public String getTitulo() {
+		return titulo;
+	}
 
-    public String getTitulo() {
-        return titulo;
-    }
+	public void setTitulo(String titulo) {
+		this.titulo = titulo;
+	}
 
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
-    }
-
-
-    public Tipo getTipo() {
+	public Tipo getTipo() {
 		return tipo;
 	}
 
@@ -140,124 +143,119 @@ public class Libro implements Serializable {
 		this.tipo = tipo;
 	}
 
-	public static long getSerialversionuid() {
-		return serialVersionUID;
+	public String getAdquisicion() {
+		return adquisicion;
 	}
 
-	public String getAdquisicion() {
-        return adquisicion;
-    }
+	public void setAdquisicion(String adquisicion) {
+		this.adquisicion = adquisicion;
+	}
 
-    public void setAdquisicion(String adquisicion) {
-        this.adquisicion = adquisicion;
-    }
+	public Integer getAnio_publicacion() {
+		return anio_publicacion;
+	}
 
-    public Integer getAnioPublicacion() {
-        return anioPublicacion;
-    }
+	public void setAnio_publicacion(Integer anio_publicacion) {
+		this.anio_publicacion = anio_publicacion;
+	}
 
-    public void setAnioPublicacion(Integer anioPublicacion) {
-        this.anioPublicacion = anioPublicacion;
-    }
+	public String getEditor() {
+		return editor;
+	}
 
-    public String getEditor() {
-        return editor;
-    }
+	public void setEditor(String editor) {
+		this.editor = editor;
+	}
 
-    public void setEditor(String editor) {
-        this.editor = editor;
-    }
+	public String getCiudad() {
+		return ciudad;
+	}
 
-    public String getCiudad() {
-        return ciudad;
-    }
+	public void setCiudad(String ciudad) {
+		this.ciudad = ciudad;
+	}
 
-    public void setCiudad(String ciudad) {
-        this.ciudad = ciudad;
-    }
+	public String getNum_paginas() {
+		return num_paginas;
+	}
 
-    public String getNumPaginas() {
-        return numPaginas;
-    }
+	public void setNum_paginas(String num_paginas) {
+		this.num_paginas = num_paginas;
+	}
 
-    public void setNumPaginas(String numPaginas) {
-        this.numPaginas = numPaginas;
-    }
+	public String getArea() {
+		return area;
+	}
 
-    public String getArea() {
-        return area;
-    }
+	public void setArea(String area) {
+		this.area = area;
+	}
 
-    public void setArea(String area) {
-        this.area = area;
-    }
+	public String getCod_ISBN() {
+		return cod_ISBN;
+	}
 
-    public String getCodIsbn() {
-        return codIsbn;
-    }
+	public void setCod_ISBN(String cod_ISBN) {
+		this.cod_ISBN = cod_ISBN;
+	}
 
-    public void setCodIsbn(String codIsbn) {
-        this.codIsbn = codIsbn;
-    }
+	public String getIdioma() {
+		return idioma;
+	}
 
-    public String getIdioma() {
-        return idioma;
-    }
+	public void setIdioma(String idioma) {
+		this.idioma = idioma;
+	}
 
-    public void setIdioma(String idioma) {
-        this.idioma = idioma;
-    }
+	public String getDescripcion() {
+		return descripcion;
+	}
 
-    public String getDescripcion() {
-        return descripcion;
-    }
+	public void setDescripcion(String descripcion) {
+		this.descripcion = descripcion;
+	}
 
-    public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
-    }
+	public String getDimensiones() {
+		return dimensiones;
+	}
 
-    public String getDimensiones() {
-        return dimensiones;
-    }
+	public void setDimensiones(String dimensiones) {
+		this.dimensiones = dimensiones;
+	}
 
-    public void setDimensiones(String dimensiones) {
-        this.dimensiones = dimensiones;
-    }
+	public String getEstado_libro() {
+		return estado_libro;
+	}
 
-    public String getEstadoLibro() {
-        return estadoLibro;
-    }
+	public void setEstado_libro(String estado_libro) {
+		this.estado_libro = estado_libro;
+	}
 
-    public void setEstadoLibro(String estadoLibro) {
-        this.estadoLibro = estadoLibro;
-    }
+	public Boolean getActivo() {
+		return activo;
+	}
 
-    public Boolean getActivo() {
-        return activo;
-    }
+	public void setActivo(Boolean activo) {
+		this.activo = activo;
+	}
 
-    public void setActivo(Boolean activo) {
-        this.activo = activo;
-    }
+	public byte[] getImagen() {
+		return imagen;
+	}
 
-    public byte[] getImagen() {
-        return imagen;
-    }
+	public void setImagen(byte[] imagen) {
+		this.imagen = imagen;
+	}
 
-    public void setImagen(byte[] imagen) {
-        this.imagen = imagen;
-    }
+	public String getUrl_digital() {
+		return url_digital;
+	}
 
-    public String getUrlDigital() {
-        return urlDigital;
-    }
+	public void setUrl_digital(String url_digital) {
+		this.url_digital = url_digital;
+	}
 
-    public void setUrlDigital(String urlDigital) {
-        this.urlDigital = urlDigital;
-    }
-
-
-    public Bibliotecarios getBibliotecario() {
+	public Bibliotecarios getBibliotecario() {
 		return bibliotecario;
 	}
 
@@ -265,61 +263,61 @@ public class Libro implements Serializable {
 		this.bibliotecario = bibliotecario;
 	}
 
-    public Date getFechaCreacion() {
-        return fechaCreacion;
-    }
+	public Date getFecha_creacion() {
+		return fecha_creacion;
+	}
 
-    public void setFechaCreacion(Date fechaCreacion) {
-        this.fechaCreacion = fechaCreacion;
-    }
+	public void setFecha_creacion(Date fecha_creacion) {
+		this.fecha_creacion = fecha_creacion;
+	}
 
-    public Boolean getDisponibilidad() {
-        return disponibilidad;
-    }
+	public Boolean getDisponibilidad() {
+		return disponibilidad;
+	}
 
-    public void setDisponibilidad(Boolean disponibilidad) {
-        this.disponibilidad = disponibilidad;
-    }
+	public void setDisponibilidad(Boolean disponibilidad) {
+		this.disponibilidad = disponibilidad;
+	}
 
-    public String getIndiceUno() {
-        return indiceUno;
-    }
+	public String getIndice_uno() {
+		return indice_uno;
+	}
 
-    public void setIndiceUno(String indiceUno) {
-        this.indiceUno = indiceUno;
-    }
+	public void setIndice_uno(String indice_uno) {
+		this.indice_uno = indice_uno;
+	}
 
-    public String getIndiceDos() {
-        return indiceDos;
-    }
+	public String getIndice_dos() {
+		return indice_dos;
+	}
 
-    public void setIndiceDos(String indiceDos) {
-        this.indiceDos = indiceDos;
-    }
+	public void setIndice_dos(String indice_dos) {
+		this.indice_dos = indice_dos;
+	}
 
-    public String getIndiceTres() {
-        return indiceTres;
-    }
+	public String getIndice_tres() {
+		return indice_tres;
+	}
 
-    public void setIndiceTres(String indiceTres) {
-        this.indiceTres = indiceTres;
-    }
+	public void setIndice_tres(String indice_tres) {
+		this.indice_tres = indice_tres;
+	}
 
-    public String getNombreDonante() {
-        return nombreDonante;
-    }
+	public String getNombre_donante() {
+		return nombre_donante;
+	}
 
-    public void setNombreDonante(String nombreDonante) {
-        this.nombreDonante = nombreDonante;
-    }
+	public void setNombre_donante(String nombre_donante) {
+		this.nombre_donante = nombre_donante;
+	}
 
-    public byte[] getDocumentoDonacion() {
-        return documentoDonacion;
-    }
+	public byte[] getDocumento_donacion() {
+		return documento_donacion;
+	}
 
-    public void setDocumentoDonacion(byte[] documentoDonacion) {
-        this.documentoDonacion = documentoDonacion;
-    }
+	public void setDocumento_donacion(byte[] documento_donacion) {
+		this.documento_donacion = documento_donacion;
+	}
 
 	public List<Prestamo> getPrestamo() {
 		return prestamo;
@@ -336,7 +334,10 @@ public class Libro implements Serializable {
 	public void setAutores(List<AutorLibro> autores) {
 		this.autores = autores;
 	}
-	
+    
+    
+
+   
 	
     
     

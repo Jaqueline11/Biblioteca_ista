@@ -37,7 +37,7 @@ public class PrestamoController {
 	}
 	
 	
-	@GetMapping("/verprestamo/{id}")
+	@GetMapping("/prestamo/{id}")
 	public Prestamo findById(@PathVariable int id){
 		return prestamoservice.findById(id);
 	}
@@ -50,15 +50,15 @@ public class PrestamoController {
 		Prestamo prestamoactual=prestamoservice.findById(id);
 		prestamoactual.setUsuario(prestamo.getUsuario());
 		prestamoactual.setLibro(prestamo.getLibro());
-		prestamoactual.setEstadoPrestamo(prestamo.getEstadoPrestamo());
-		prestamoactual.setFechaEntrega(prestamo.getFechaEntrega());
+		prestamoactual.setEstado_prestamo(prestamo.getEstado_prestamo());
+		prestamoactual.setFecha_entrega(prestamo.getFecha_entrega());
 		prestamoactual.setBibliotecario_entrega(prestamo.getBibliotecario_entrega());
-		prestamoactual.setDocumentoHabilitante(prestamo.getDocumentoHabilitante());
-		prestamoactual.setFechaRecibido(prestamo.getFechaRecibido());
+		prestamoactual.setDocumento_habilitante(prestamo.getDocumento_habilitante());
+		prestamoactual.setFecha_recibido(prestamo.getFecha_recibido());
 		prestamoactual.setBibliotecario_recibido(prestamo.getBibliotecario_recibido());
-		prestamoactual.setFechaMaxima(prestamo.getFechaMaxima());
+		prestamoactual.setFecha_maxima(prestamo.getFecha_maxima());
 		prestamoactual.setActivo(prestamo.getActivo());
-		prestamoactual.setEscaneoMatriz(prestamo.getEscaneoMatriz());
+		prestamoactual.setEscaneo_matriz(prestamo.getEscaneo_matriz());
 		return prestamoservice.save(prestamoactual);
 	}
 

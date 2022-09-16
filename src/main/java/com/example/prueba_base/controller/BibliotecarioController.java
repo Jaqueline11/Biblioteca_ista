@@ -35,11 +35,10 @@ public class BibliotecarioController {
     @ResponseStatus(HttpStatus.CREATED)
     public Bibliotecarios editar(@RequestBody Bibliotecarios bibliotecario, @PathVariable Integer id){
         Bibliotecarios bibliotecarioactual=bibliotecarioService.findById(id);
-        bibliotecarioactual.set_persona(bibliotecario.get_persona());
-        bibliotecarioactual.setRol(bibliotecario.getRol());
-        bibliotecarioactual.setFechaInicio(bibliotecario.getFechaInicio());
-        bibliotecarioactual.setFechaFin(bibliotecario.getFechaFin());
-        bibliotecarioactual.setActivoBibliotecario(bibliotecario.getActivoBibliotecario());
+        bibliotecarioactual.setPersona(bibliotecario.getPersona());
+        bibliotecarioactual.setFecha_inicio(bibliotecario.getFecha_inicio());
+        bibliotecarioactual.setFecha_fin(bibliotecario.getFecha_fin());
+        bibliotecarioactual.setActivo_bibliotecario(bibliotecario.getActivo_bibliotecario());
         return bibliotecarioService.save(bibliotecarioactual);
     }
 
