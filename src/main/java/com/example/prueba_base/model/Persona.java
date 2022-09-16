@@ -38,11 +38,7 @@ public class Persona implements Serializable {
     @Column(name = "activo")
     private Boolean activo;
     
-    @OneToOne(mappedBy = "persona")
-    private Usuarios usu;
-    
-    @OneToOne(mappedBy = "persona")
-    private Bibliotecarios bib;
+
 
     @Column(name = "rol")
     private int rol;
@@ -122,21 +118,6 @@ public class Persona implements Serializable {
 		this.activo = activo;
 	}
 
-	public Usuarios getUsu() {
-		return usu;
-	}
-
-	public void setUsu(Usuarios usu) {
-		this.usu = usu;
-	}
-
-	public Bibliotecarios getBib() {
-		return bib;
-	}
-
-	public void setBib(Bibliotecarios bib) {
-		this.bib = bib;
-	}
 
 
     
