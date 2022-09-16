@@ -9,6 +9,8 @@ public interface IBibliotecarioService {
 
     public List<Bibliotecarios> findAll();
 
+
+
     public Bibliotecarios  save(Bibliotecarios c);
     public Bibliotecarios findById(Integer id);
 

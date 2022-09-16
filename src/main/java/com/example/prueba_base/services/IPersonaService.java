@@ -4,13 +4,20 @@ import com.example.prueba_base.model.Persona;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface IPersonaService {
-
     public List<Persona> findAll();
 
     public Persona  save(Persona c);
     public Persona findById(Integer id);
+    Optional<Persona> findByUsuario(String usuario);
 
+    Optional <Persona> findByUsuarioAndClave(String usuario, String clave);
     public void delete(Integer id);
+
+    boolean validacionLogin(String usu, String password);
+
+
+    boolean validacionActivo(String usu, String password);
 }

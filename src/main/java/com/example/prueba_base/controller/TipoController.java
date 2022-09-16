@@ -32,7 +32,7 @@ public class TipoController {
 		return tiposervice.findAll();
 	}
 	
-	@PostMapping("/crearTipo")
+	@PostMapping("/creartipo")
 	@ResponseStatus(HttpStatus.CREATED)
 	public Tipo save(@RequestBody Tipo t) {
 		return tiposervice.save(t);
