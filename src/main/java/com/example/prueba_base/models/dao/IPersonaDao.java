@@ -7,6 +7,8 @@ import java.util.Optional;
 
 public interface IPersonaDao extends CrudRepository<Persona,Integer> {
 
+    Optional<Persona> findByCedula(String clave);
+    
     Optional<Persona> findByUsuario(String usuario);
 
     Optional <Persona> findByUsuarioAndClave(String usuario, String clave);

@@ -16,11 +16,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.prueba_base.model.HistorialLibro;
-import com.example.prueba_base.model.Prestamo;
-import com.example.prueba_base.model.Tipo;
 import com.example.prueba_base.services.IHistorialLibroService;
-import com.example.prueba_base.services.IPrestamoService;
-import com.example.prueba_base.services.ITipoService;
 
 @CrossOrigin(origins = {"http://localhost:8080"})
 @RestController

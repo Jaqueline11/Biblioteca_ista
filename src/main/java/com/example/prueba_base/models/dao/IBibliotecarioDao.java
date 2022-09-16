@@ -8,6 +8,7 @@ import java.util.Optional;
 
 public interface IBibliotecarioDao extends CrudRepository<Bibliotecarios,Integer> {
 
-
+	Optional<Bibliotecarios> findByPersona(Optional<Persona> persona);
+	
     Optional<Bibliotecarios> findByPersona(Persona persona);
 }

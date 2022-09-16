@@ -5,7 +5,6 @@ import com.example.prueba_base.postgres.dao.IPersonaDaoP;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import java.util.Map;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
