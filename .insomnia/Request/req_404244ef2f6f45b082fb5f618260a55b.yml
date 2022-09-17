@@ -1,0 +1,121 @@
+_id: req_404244ef2f6f45b082fb5f618260a55b
+type: Request
+parentId: fld_72a533a8c04242d4bd1376986fd9a6b2
+modified: 1663378991177
+created: 1663363608797
+url: http://localhost:8080/api/crearlibro
+name: cre_lib
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: >-
+    {
+    	"codigo_dewey":"101.1",
+    	"titulo":"librouno",
+    	"tipo":{
+    		"id_tipo":"1"
+    	},
+    	"adquisicion":"donacion",
+    	"anio_publicacion":"2001",
+    	"editor":"editoruno",
+    	"ciudad":"cuenca",
+    	"num_paginas":"200",
+    	"area":"salud",
+    	"cod_ISBN":"aaa1111aaa",
+    	"idioma":"español",
+    	"descripcion":"libro de salud",
+    	"dimensiones":"12x32",
+    	"estado_libro":"bueno",
+    	"activo":"true",
+    	"imagen":null,
+    	"url_digital":"https://www.youtube.com/watch?v=d8RpmsAhBzY",
+    	"bibliotecario":{
+    		"id_bibliotecario":"1"
+    	},
+    	"fecha_creacion":"2001-01-01",
+    	"indice_uno":"indice_uno",
+    	"indice_dos":"indice_dos",
+    	"indice_tres":"indice_tres",
+    	"nombre_donante":"sor teresa de calcuta",
+    	"documento_donacion":null,
+    	"disponibilidad":"true"
+    },
+
+    {
+    	"codigo_dewey":"102.2",
+    	"titulo":"librodos",
+    	"tipo":{
+    		"id_tipo":"3"
+    	},
+    	"adquisicion":"donacion",
+    	"anio_publicacion":"2002",
+    	"editor":"editordos",
+    	"ciudad":"quito",
+    	"num_paginas":"300",
+    	"area":"salud",
+    	"cod_ISBN":"aaa222aaa",
+    	"idioma":"espanglish",
+    	"descripcion":"libro de moda",
+    	"dimensiones":"12x32",
+    	"estado_libro":"bueno",
+    	"activo":"true",
+    	"imagen":null,
+    	"url_digital":"https://www.youtube.com/watch?v=QJxVKz8XaAk&list=RDGMEMvfp7ES4lmaFn5N-V4NUhoQ&start_radio=1&rv=aM9tj2c1688",
+    	"bibliotecario":{
+    		"id_bibliotecario":"2"
+    	},
+    	"fecha_creacion":"2002-02-02",
+    	"indice_uno":"indice_uno",
+    	"indice_dos":"indice_dos",
+    	"indice_tres":"indice_tres",
+    	"nombre_donante":"reina isabel",
+    	"documento_donacion":null,
+    	"disponibilidad":"true"
+    },
+
+    {
+    	"codigo_dewey":"103.3",
+    	"titulo":"librotres",
+    	"tipo":{
+    		"id_tipo":"5"
+    	},
+    	"adquisicion":"donacion",
+    	"anio_publicacion":"2003",
+    	"editor":"editortres",
+    	"ciudad":"azogues",
+    	"num_paginas":"250",
+    	"area":"erotico",
+    	"cod_ISBN":"aaa333aaa",
+    	"idioma":"portugues",
+    	"descripcion":"libro de educacion",
+    	"dimensiones":"12x32",
+    	"estado_libro":"bueno",
+    	"activo":"true",
+    	"imagen":null,
+    	"url_digital":"https://www.youtube.com/watch?v=3yEQLsMyLwE&list=RDGMEMvfp7ES4lmaFn5N-V4NUhoQ&index=7",
+    	"bibliotecario":{
+    		"id_bibliotecario":"3"
+    	},
+    	"fecha_creacion":"2003-03-03",
+    	"indice_uno":"indice_uno",
+    	"indice_dos":"indice_dos",
+    	"indice_tres":"indice_tres",
+    	"nombre_donante":"enzo ferrary",
+    	"documento_donacion":null,
+    	"disponibilidad":"true"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_c3a6aec379db4c038e2d1d0319344536
+authentication: {}
+metaSortKey: -1663363608797
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

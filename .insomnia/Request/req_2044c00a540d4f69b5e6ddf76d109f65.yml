@@ -1,0 +1,42 @@
+_id: req_2044c00a540d4f69b5e6ddf76d109f65
+type: Request
+parentId: fld_6ee6e9c9709a4eb3b1f610b5fe006241
+modified: 1663363406524
+created: 1663363201433
+url: http://localhost:8080/api/editarbibliotecario/2
+name: edi_bib
+description: ""
+method: PUT
+body:
+  mimeType: application/json
+  text: |-
+    {	
+    	"fecha_inicio":"2001-01-01",
+    	"fecha_fin":"2001-01-01",
+    	"activo_bibliotecario":"true",
+    	"persona":{
+    		"id_persona":"6",
+    		"activo":"true",
+    		"cedula":"5555555555",
+    		"celular":"5555555555",
+    		"clave":"modi",
+    		"correo":"mod@555.com",
+    		"nombres":"Cristiano Ronaldo dos Santos Aveiro",
+    		"usuario":"elbicho",
+    		"rol":"1"
+    		}
+    	}
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_27efaa5e9bf646ea9910486563cd26a0
+authentication: {}
+metaSortKey: -1663363201433
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

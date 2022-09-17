@@ -1,0 +1,70 @@
+_id: req_8589a6eec44a4fc8bfaff446ec39479d
+type: Request
+parentId: fld_382b4fe775e845cda98d0440047caf5d
+modified: 1663371842874
+created: 1663352722932
+url: http://localhost:8080/api/crearusuario
+name: cre_usu
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |
+    
+
+    	{	
+    	"calificacion":"5",
+    	"observaciones":"ninguna",
+    	"persona":{
+    		"activo":"true",
+    		"cedula":"1111111111",
+    		"celular":"1111111111",
+    		"clave":"1111",
+    		"correo":"111@111.com",
+    		"nombres":"Abdalá Jaime Bucaram Ortiz",
+    		"usuario":"elloco",
+    		"rol":"2"
+    		}
+    	},
+    		{	
+    	"calificacion":"4",
+    	"observaciones":"ninguna",
+    	"persona":{
+    		"activo":"true",
+    		"cedula":"2222222222",
+    		"celular":"2222222222",
+    		"clave":"2222",
+    		"correo":"222@222.com",
+    		"nombres":"Rafael Vicente Correa Delgado",
+    		"usuario":"elmashi",
+    		"rol":"2"
+    		}
+    	},
+    	{	
+    	"calificacion":"3",
+    	"observaciones":"ninguna",
+    	"persona":{
+    		"activo":"true",
+    		"cedula":"3333333333",
+    		"celular":"3333333333",
+    		"clave":"3333",
+    		"correo":"333@333.com",
+    		"nombres":"Sixto Alfonso Durán-Ballén Cordovez",
+    		"usuario":"inmortal",
+    		"rol":"2"
+    		}
+    	}
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_4ca317def3af4bb7b052ebe9b3aff242
+authentication: {}
+metaSortKey: -1662254849428
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

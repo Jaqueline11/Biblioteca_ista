@@ -1,0 +1,10 @@
+_id: fld_fd30bcba640d4b2b802f2b91cd22caf0
+type: RequestGroup
+parentId: wrk_f50131253bdc48f0a1d672337b4cc665
+modified: 1663363779488
+created: 1663363776292
+name: Tipo
+description: ""
+environment: {}
+environmentPropertyOrder: null
+metaSortKey: -1663363095292.5

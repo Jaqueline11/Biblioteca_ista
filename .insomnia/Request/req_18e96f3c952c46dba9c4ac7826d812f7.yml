@@ -1,0 +1,41 @@
+_id: req_18e96f3c952c46dba9c4ac7826d812f7
+type: Request
+parentId: fld_fd30bcba640d4b2b802f2b91cd22caf0
+modified: 1663371875199
+created: 1663363782156
+url: http://localhost:8080/api/creartipo
+name: cre_tip
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"nombre":"libro"
+    },
+    {
+    	"nombre":"revista"
+    },
+    {
+    	"nombre":"tesis"
+    },
+    {
+    	"nombre":"ensayos"
+    },
+    {
+    	"nombre":"monografia"
+    },
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_2b7fa5691b064cceac81d7670619345e
+authentication: {}
+metaSortKey: -1663363782156
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

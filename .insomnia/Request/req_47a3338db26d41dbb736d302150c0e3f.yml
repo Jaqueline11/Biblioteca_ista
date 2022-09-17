@@ -1,0 +1,35 @@
+_id: req_47a3338db26d41dbb736d302150c0e3f
+type: Request
+parentId: fld_2df27da98496482f8fdff3d544b3ae8b
+modified: 1663378522270
+created: 1663370521118
+url: http://localhost:8080/api/editarautorlibros/1
+name: edi_ali
+description: ""
+method: PUT
+body:
+  mimeType: application/json
+  text: |-
+    
+    {
+    	"libro":{
+    		"id_libro":"1"
+    	},
+    	"autor":{
+    		"id_autor":"2"
+    	}
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_89eee9e4e49a4b6a9d2a4b0e89469b57
+authentication: {}
+metaSortKey: -1663370521118
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

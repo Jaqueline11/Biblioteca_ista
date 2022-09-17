@@ -1,0 +1,71 @@
+_id: req_86889e47b23f41818c198d52b8680f29
+type: Request
+parentId: fld_6ee6e9c9709a4eb3b1f610b5fe006241
+modified: 1663371857426
+created: 1663362604268
+url: http://localhost:8080/api/crearbibliotecario
+name: cre_bib
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    	{	
+    	"fecha_inicio":"2022-10-10",
+    	"fecha_fin":"2022-10-10",
+    	"activo_bibliotecario":"true",
+    	"persona":{
+    		"activo":"true",
+    		"cedula":"4444444444",
+    		"celular":"4444444444",
+    		"clave":"4444",
+    		"correo":"444@444.com",
+    		"nombres":"Lionel Andrés Messi Cuccittini",
+    		"usuario":"lapulga",
+    		"rol":"0"
+    		}
+    	},	
+    {	
+    	"fecha_inicio":"2022-11-11",
+    	"fecha_fin":"2022-11-11",
+    	"activo_bibliotecario":"true",
+    	"persona":{
+    		"activo":"true",
+    		"cedula":"5555555555",
+    		"celular":"5555555555",
+    		"clave":"5555",
+    		"correo":"555@555.com",
+    		"nombres":"Cristiano Ronaldo dos Santos Aveiro",
+    		"usuario":"cr7",
+    		"rol":"1"
+    		}
+    	},
+    	{	
+    	"fecha_inicio":"2022-12-12",
+    	"fecha_fin":"2022-12-12",
+    	"activo_bibliotecario":"true",
+    	"persona":{
+    		"activo":"true",
+    		"cedula":"6666666666",
+    		"celular":"6666666666",
+    		"clave":"6666",
+    		"correo":"666@666.com",
+    		"nombres":"Gonzalo Jordy Plata Jiménez",
+    		"usuario":"platita",
+    		"rol":"1"
+    		}
+    	}
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_8612ca08beff4fa5b7f34a486e2510f0
+authentication: {}
+metaSortKey: -1663362604268
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

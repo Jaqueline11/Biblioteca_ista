@@ -1,0 +1,29 @@
+_id: req_3e1dd51f0076460a92041ba3473c9fcd
+type: Request
+parentId: fld_fd30bcba640d4b2b802f2b91cd22caf0
+modified: 1663364402496
+created: 1663363943875
+url: http://localhost:8080/api/editartipo/5
+name: mod_tip
+description: ""
+method: PUT
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"nombre":"novela"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_8328866652724c76be8c9074c9406ed7
+authentication: {}
+metaSortKey: -1663363943875
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

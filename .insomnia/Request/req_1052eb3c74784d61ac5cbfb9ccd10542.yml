@@ -1,0 +1,48 @@
+_id: req_1052eb3c74784d61ac5cbfb9ccd10542
+type: Request
+parentId: fld_3e2beb5ab34148658cfa1c32bef99364
+modified: 1663367345574
+created: 1663367200368
+url: http://localhost:8080/api/editarprestamo/2
+name: mod_pre
+description: ""
+method: PUT
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"usuario":{
+    			"id_usuario":"1"
+    	},
+    	"libro":{
+    			"id_libro":"1"
+    	},
+    	"estado_libro":"buenomodificado",
+    	"estado_prestamo":"solicitadomodificado",
+    	"fecha_entrega":"2012-12-12",
+    	"bibliotecario_entrega":{
+    			"id_bibliotecario":"1"
+    	},
+    	"bibliotecario_recibido":{
+    			"id_bibliotecario":"1"
+    	},
+    	"documento_habilitante":"cedulamodificado",
+    	"fecha_recibido":"2001-01-01",
+    	"fecha_maxima":"2001-01-01",
+    	"activo":"true",
+    	"escaneo_matriz":null	
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_c30d91e2ac854365b39edb69521649d5
+authentication: {}
+metaSortKey: -1663367200368
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,29 @@
+_id: req_1384dacbfda54c06a59a9ace2569bcc9
+type: Request
+parentId: fld_a806753e616b48ba9c3a87f3c1883b61
+modified: 1663367829057
+created: 1663367755433
+url: http://localhost:8080/api/editarautor/1
+name: mod_aut
+description: ""
+method: PUT
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"nombre":"Gustav Climb"
+    },
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_0d7ef41f31bc4f42939fcfa5153688df
+authentication: {}
+metaSortKey: -1663367755433
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

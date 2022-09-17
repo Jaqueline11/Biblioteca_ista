@@ -1,0 +1,35 @@
+_id: req_8c33012a689b4765b641426fc49b3efd
+type: Request
+parentId: fld_a806753e616b48ba9c3a87f3c1883b61
+modified: 1663372025576
+created: 1663367577237
+url: http://localhost:8080/api/crearautor
+name: cre_aut
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"nombre":"Homero"
+    },
+    {
+    	"nombre":"Gabriel Garcia Marquez"
+    },
+    {
+    	"nombre":"Frank Kafka"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_7b6254b9428f49ea9af615b1c2dae0df
+authentication: {}
+metaSortKey: -1663367577237
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,41 @@
+_id: req_d080801817c740458a6bdac5b05ba525
+type: Request
+parentId: fld_382b4fe775e845cda98d0440047caf5d
+modified: 1663362568369
+created: 1663362258312
+url: http://localhost:8080/api/editarusuario/1
+name: mod_usu
+description: ""
+method: PUT
+body:
+  mimeType: application/json
+  text: |-
+    	{	
+    	"calificacion":"5",
+    	"observaciones":"modificado",
+    	"persona":{
+    		"id_persona":"1",
+    		"activo":"true",
+    		"cedula":"1111111111",
+    		"celular":"1111111111",
+    		"clave":"1111mod",
+    		"correo":"111@111.com",
+    		"nombres":"Abdalá Jaime Bucaram Ortiz",
+    		"usuario":"ellocomod",
+    		"rol":"2"
+    		}
+    	}
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_72bbfd4525764eb985e80d60c6ae515b
+authentication: {}
+metaSortKey: -1663362258312
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

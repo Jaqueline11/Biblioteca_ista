@@ -1,0 +1,51 @@
+_id: req_34b1643268134c5b84d2640b580e04ab
+type: Request
+parentId: fld_2df27da98496482f8fdff3d544b3ae8b
+modified: 1663378523107
+created: 1663368026961
+url: http://localhost:8080/api/crearautorlibro
+name: cre_ali
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    
+    {
+    	"libro":{
+    		"id_libro":"1"
+    	},
+    	"autor":{
+    		"id_autor":"1"
+    	}
+    },
+    {
+    	"libro":{
+    		"id_libro":"2"
+    	},
+    	"autor":{
+    		"id_autor":"2"
+    	}
+    },
+    {
+    	"libro":{
+    		"id_libro":"3"
+    	},
+    	"autor":{
+    		"id_autor":"3"
+    	}
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_5337bbce57b0427a9d2e2bf4489b19e1
+authentication: {}
+metaSortKey: -1663368026961
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,57 @@
+_id: req_e686e394af694ff39cbd01a11c6858af
+type: Request
+parentId: fld_72a533a8c04242d4bd1376986fd9a6b2
+modified: 1663378534868
+created: 1663365400984
+url: http://localhost:8080/api/editarlibros/1
+name: mod_lib
+description: ""
+method: PUT
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"codigo_dewey":"101.1",
+    	"titulo":"librounomodificado",
+    	"tipo":{
+    		"id_tipo":"1"
+    	},
+    	"adquisicion":"donacion",
+    	"anio_publicacion":"2001",
+    	"editor":"editorunomodificado",
+    	"ciudad":"cuenca",
+    	"num_paginas":"200",
+    	"area":"salud",
+    	"cod_ISBN":"aaa1111aaa",
+    	"idioma":"españolmodificado",
+    	"descripcion":"libro de salud",
+    	"dimensiones":"12x32",
+    	"estado_libro":"buenomodificado",
+    	"activo":"true",
+    	"imagen":null,
+    	"url_digital":"https://www.youtube.com/watch?v=d8RpmsAhBzY",
+    	"bibliotecario":{
+    		"id_bibliotecario":"2"
+    	},
+    	"fecha_creacion":"2001-01-01",
+    	"indice_uno":"indice_uno",
+    	"indice_dos":"indice_dos",
+    	"indice_tres":"indice_tres",
+    	"nombre_donante":"sor teresa de calcuta",
+    	"documento_donacion":null,
+    	"disponibilidad":"true"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_f43814e1271f49529b832ec6bb949f71
+authentication: {}
+metaSortKey: -1663365400984
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
