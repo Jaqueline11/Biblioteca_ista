@@ -15,12 +15,9 @@ public class PersonaController {
     @GetMapping("/validarLogin")
     public boolean validarLogin(@RequestParam("usuario") String usuario, @RequestParam("clave")String clave){
         if (personaService.validacionLogin(usuario,clave)){
-            System.out.println("Iniciar Sesion");
             if (personaService.validacionActivo(usuario,clave)==true){
-                System.out.println("entrooooooooooooooooooooooo");
                 return true;
             }else {
-                System.out.println("no entrooooooooooooooooooooooo");
                 return false;
             }
         }else {
@@ -28,5 +25,10 @@ public class PersonaController {
             return false;
         }
 
+    }
+    
+    @GetMapping("/num_rol")
+    public int verificarrol(@RequestParam("usuario") String usuario) {
+    	return personaService.rolpersona(usuario);
     }
 }

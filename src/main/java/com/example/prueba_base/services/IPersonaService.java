@@ -17,7 +17,8 @@ public interface IPersonaService {
     public void delete(Integer id);
 
     boolean validacionLogin(String usu, String password);
-
+    
+    int rolpersona(String usuario);
 
     boolean validacionActivo(String usu, String password);
 }

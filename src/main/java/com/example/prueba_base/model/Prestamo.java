@@ -5,9 +5,6 @@ import lombok.Data;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
-import com.example.prueba_base.model.Bibliotecarios;
-import com.example.prueba_base.model.Usuarios;
-import com.example.prueba_base.model.Libro;
 
 @Data
 @Entity

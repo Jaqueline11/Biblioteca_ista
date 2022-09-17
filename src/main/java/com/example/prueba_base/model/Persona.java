@@ -36,9 +36,7 @@ public class Persona implements Serializable {
     private String celular;
 
     @Column(name = "activo")
-    private Boolean activo;
-    
-
+    private Boolean activo;   
 
     @Column(name = "rol")
     private int rol;

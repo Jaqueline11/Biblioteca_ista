@@ -71,4 +71,9 @@ public class PersonaServiceImp implements IPersonaService{
 
     }
 
+	@Override
+	public int rolpersona(String usuario) {
+		return personaDao.findByUsuario(usuario).get().getRol();
+	}
+
 }

@@ -15,9 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.prueba_base.model.Prestamo;
 import com.example.prueba_base.model.Tipo;
-import com.example.prueba_base.services.IPrestamoService;
 import com.example.prueba_base.services.ITipoService;
 
 @CrossOrigin(origins = {"http://localhost:8080"})
@@ -50,7 +48,6 @@ public class TipoController {
 	@ResponseStatus(HttpStatus.CREATED)
 	public Tipo editar(@RequestBody Tipo tipo, @PathVariable int id){
 		Tipo tipoactual=tiposervice.findById(id);
-		tipoactual.setId_tipo(tipo.getId_tipo());
 		tipoactual.setNombre(tipo.getNombre());
 		return tiposervice.save(tipoactual);
 	}
