@@ -25,10 +25,13 @@ public class PersonaServiceImpP implements IPersonaServiceP{
 	@Override
 	@Transactional(readOnly = true)
 	public PersonaP buscaralumno(String ced) {
-        LOGGER.info(ced);
-        LOGGER.debug(ced);
-        LOGGER.error(ced);
 		return personaDao.buscaralumno(ced);
+	}
+
+	@Override
+	@Transactional(readOnly = true)
+	public PersonaP buscardocente(String ced) {
+		return personaDao.buscardocente(ced);
 	}
 
 	

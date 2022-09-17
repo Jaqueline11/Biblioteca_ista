@@ -7,4 +7,5 @@ public interface IPersonaServiceP {
 	
 	public PersonaP buscaralumno(String ced);
 	
+	public PersonaP buscardocente(String ced);
 }

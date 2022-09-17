@@ -24,4 +24,9 @@ public class PersonaControllerP {
 		return personaservice.buscaralumno(ced);
 	}
 	
+	@GetMapping("/fenix_docente")
+	public PersonaP docentecedula(@RequestParam String ced) {
+		return personaservice.buscardocente(ced);
+	}
+	
 }

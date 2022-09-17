@@ -16,4 +16,7 @@ public interface IPersonaDaoP extends CrudRepository<PersonaP,String> {
 
 	@Procedure(value = "datos_istateca")
 	public PersonaP buscaralumno(@Param("ced") String ced);	
+	
+	@Procedure(value = "datos_istateca_docente")
+	public PersonaP buscardocente(@Param("ced") String ced);	
 }

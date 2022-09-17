@@ -10,15 +10,27 @@ import java.io.Serializable;
 
 @Entity
 @Data
-@NamedStoredProcedureQuery(name = "buscaralumno", procedureName = "datos_istateca",	
-		parameters = {
-		@StoredProcedureParameter(mode = ParameterMode.IN, name = "ced", type = String.class),
-		@StoredProcedureParameter(mode = ParameterMode.OUT, name = "id", type = Integer.class),
-		@StoredProcedureParameter(mode = ParameterMode.OUT, name = "cedula", type = String.class),
-		@StoredProcedureParameter(mode = ParameterMode.OUT, name = "celular", type = String.class),
-		@StoredProcedureParameter(mode = ParameterMode.OUT, name = "correo", type = String.class),
-		@StoredProcedureParameter(mode = ParameterMode.OUT, name = "nombres", type = String.class)
+@NamedStoredProcedureQueries({
+	@NamedStoredProcedureQuery(name = "buscaralumno", procedureName = "datos_istateca",	
+			parameters = {
+			@StoredProcedureParameter(mode = ParameterMode.IN, name = "ced", type = String.class),
+			@StoredProcedureParameter(mode = ParameterMode.OUT, name = "id", type = Integer.class),
+			@StoredProcedureParameter(mode = ParameterMode.OUT, name = "cedula", type = String.class),
+			@StoredProcedureParameter(mode = ParameterMode.OUT, name = "celular", type = String.class),
+			@StoredProcedureParameter(mode = ParameterMode.OUT, name = "correo", type = String.class),
+			@StoredProcedureParameter(mode = ParameterMode.OUT, name = "nombres", type = String.class)
+	}),
+	@NamedStoredProcedureQuery(name = "buscardocente", procedureName = "datos_istateca_docente",	
+	parameters = {
+	@StoredProcedureParameter(mode = ParameterMode.IN, name = "ced", type = String.class),
+	@StoredProcedureParameter(mode = ParameterMode.OUT, name = "id", type = Integer.class),
+	@StoredProcedureParameter(mode = ParameterMode.OUT, name = "cedula", type = String.class),
+	@StoredProcedureParameter(mode = ParameterMode.OUT, name = "celular", type = String.class),
+	@StoredProcedureParameter(mode = ParameterMode.OUT, name = "correo", type = String.class),
+	@StoredProcedureParameter(mode = ParameterMode.OUT, name = "nombres", type = String.class)
+	})
 })
+
 public class PersonaP implements Serializable {
 
     private static final long serialVersionUID = 1L;
