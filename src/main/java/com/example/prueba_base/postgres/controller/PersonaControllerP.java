@@ -11,19 +11,15 @@ import org.springframework.web.bind.annotation.RestController;
 import com.example.prueba_base.postgres.services.IPersonaServiceP;
 import com.example.prueba_base.postgres.models.PersonaP;
 
-@CrossOrigin(origins = {"http://localhost:4200"})
+@CrossOrigin(origins = {"http://localhost:8080"})
 @RestController
 @RequestMapping("/api")
 public class PersonaControllerP {
 	@Autowired
     private IPersonaServiceP personaservice;
 	
-	/*
-	 @GetMapping("/fenix")
-	 public Map<String,PersonaP> xcedula(@RequestParam String cedula) {
-		 return personaservice.buscaralumno(cedula);
-	 }*/
-	@GetMapping("/fenix")
+
+	@GetMapping("/fenix_alumno")
 	public PersonaP personacedula(@RequestParam String ced) {
 		return personaservice.buscaralumno(ced);
 	}
