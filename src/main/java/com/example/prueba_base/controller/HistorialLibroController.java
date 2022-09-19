@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.example.prueba_base.model.HistorialLibro;
 import com.example.prueba_base.services.IHistorialLibroService;
 
-@CrossOrigin(origins = {"http://localhost:8080"})
+@CrossOrigin(origins = {"http://localhost:4200"})
 @RestController
 @RequestMapping("/api")
 public class HistorialLibroController {
