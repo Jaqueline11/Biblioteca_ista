@@ -1,17 +1,19 @@
 package com.example.prueba_base.services;
 
+import com.example.prueba_base.model.Persona;
 import com.example.prueba_base.model.Usuarios;
+import com.example.prueba_base.models.dao.IPersonaDao;
 import com.example.prueba_base.models.dao.IUsuarioDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class UsuarioServiceImp implements IUsuarioService{
     @Autowired
-
     private IUsuarioDao usuarioDao;
 
     @Override
@@ -32,11 +34,16 @@ public class UsuarioServiceImp implements IUsuarioService{
         return usuarioDao.findById(id).orElse(null);
     }
 
+	@Override
+	public void delete(Integer id) {
+        usuarioDao.deleteById(id);		
+	}
 
-    @Override
-    @Transactional
-    public void delete(Integer id) {
-        usuarioDao.deleteById(id);
-    }
+	@Override
+	public Optional<Usuarios> findbyid_person(Persona pp) {
+		return usuarioDao.findByPersona(pp);
+	}
+
+
 
 }

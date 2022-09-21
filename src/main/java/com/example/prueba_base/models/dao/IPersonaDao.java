@@ -10,6 +10,8 @@ public interface IPersonaDao extends CrudRepository<Persona,Integer> {
     Optional<Persona> findByCedula(String clave);
     
     Optional<Persona> findByUsuario(String usuario);
+    
+    Optional<Persona> findByRol(Integer rol);
 
     Optional <Persona> findByUsuarioAndClave(String usuario, String clave);
     
