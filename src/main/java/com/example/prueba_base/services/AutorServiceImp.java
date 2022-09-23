@@ -39,4 +39,9 @@ public class AutorServiceImp implements IAutorService{
         autorDao.deleteById(id);
     }
 
+	@Override
+	public Autor findByNombre(String nombre) {
+		return autorDao.findByNombre(nombre);
+	}
+
 }

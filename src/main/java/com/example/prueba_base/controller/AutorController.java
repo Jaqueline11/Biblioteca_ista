@@ -30,6 +30,11 @@ public class AutorController {
     public Autor findById(@PathVariable Integer id){
         return autorService.findById(id);
     }
+    
+    @GetMapping("/autorxnombre/{nombre}")
+    public Autor findByNombre(@PathVariable String nombre){
+        return autorService.findByNombre(nombre);
+    }
 
     @PutMapping("/editarautor/{id}")
     @ResponseStatus(HttpStatus.CREATED)

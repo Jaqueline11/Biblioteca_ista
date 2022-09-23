@@ -10,6 +10,7 @@ public interface ILibroService {
     public List<Libro> findAll();
 
     public Libro  save(Libro c);
+    
     public Libro findById(Integer id);
 
     public void delete(Integer id);
