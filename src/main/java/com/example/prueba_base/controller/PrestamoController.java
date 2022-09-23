@@ -1,6 +1,7 @@
 package com.example.prueba_base.controller;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -15,8 +16,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.example.prueba_base.model.Persona;
 import com.example.prueba_base.model.Prestamo;
+import com.example.prueba_base.model.Usuarios;
 import com.example.prueba_base.services.IPrestamoService;
+import com.example.prueba_base.services.IUsuarioService;
+import com.example.prueba_base.services.IPersonaService;
 
 @CrossOrigin(origins = {"http://localhost:4200"})
 @RestController
@@ -24,6 +29,10 @@ import com.example.prueba_base.services.IPrestamoService;
 public class PrestamoController {
 	@Autowired
 	private IPrestamoService prestamoservice;
+	@Autowired
+	private IPersonaService personaservice;
+	@Autowired
+	private IUsuarioService usuarioservice;
 	
 	@GetMapping("/listarprestamo")
 	public List<Prestamo> indext(){
@@ -68,4 +77,12 @@ public class PrestamoController {
 	public void eliminar(@PathVariable int id){
 		prestamoservice.delete(id);
 	}
+	
+	@GetMapping("/listarprestamoxcedula/{cedula}")
+	public List<Prestamo> indice(@PathVariable String cedula){
+		Optional<Persona> p=personaservice.findByCedula(cedula);
+		Optional<Usuarios> u = usuarioservice.findbyid_person(p.orElse(null));
+		return prestamoservice.findAllByUsuario(u);
+	}
+	
 }

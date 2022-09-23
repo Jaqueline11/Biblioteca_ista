@@ -76,4 +76,9 @@ public class PersonaServiceImp implements IPersonaService{
 		return personaDao.findByUsuario(usuario).get().getRol();
 	}
 
+	@Override
+	public Optional<Persona> findByCedula(String cedula) {
+		return personaDao.findByCedula(cedula);
+	}
+
 }

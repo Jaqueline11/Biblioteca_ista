@@ -1,8 +1,7 @@
 package com.example.prueba_base.services;
 
-import com.example.prueba_base.model.Libro;
 import com.example.prueba_base.model.Prestamo;
-import com.example.prueba_base.models.dao.ILibroDao;
+import com.example.prueba_base.model.Usuarios;
 import com.example.prueba_base.models.dao.IPrestamoDao;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,6 +9,9 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+import java.util.Optional;
+
+import javax.persistence.Convert;
 
 @Service
 public class PrestamoServiceImp implements IPrestamoService{
@@ -28,10 +30,7 @@ public class PrestamoServiceImp implements IPrestamoService{
     @Transactional
     public Prestamo save(Prestamo c) {
         return prestamoDao.save(c);
-    }
-
-    
-    
+    }   
     
     
     @Override
@@ -47,6 +46,13 @@ public class PrestamoServiceImp implements IPrestamoService{
     public void delete(Integer id) {
         prestamoDao.deleteById(id);
     }
+
+
+	@Override
+	@Transactional(readOnly = true)
+	public List<Prestamo> findAllByUsuario(Optional<Usuarios> u) {
+		return (List<Prestamo>) prestamoDao.findAllByUsuario(u.orElse(null));
+	}
 
 
 

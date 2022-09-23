@@ -17,6 +17,8 @@ public interface IPersonaService {
     public void delete(Integer id);
 
     
+    Optional<Persona> findByCedula(String cedula);
+    
     Optional<Persona> findByUsuario(String usuario);
 
     Optional <Persona> findByUsuarioAndClave(String usuario, String clave);
