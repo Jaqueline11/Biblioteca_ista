@@ -1,7 +1,6 @@
 package com.example.prueba_base.services;
 
 import com.example.prueba_base.model.Libro;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 
@@ -14,4 +13,6 @@ public interface ILibroService {
     public Libro findById(Integer id);
 
     public void delete(Integer id);
+    
+    public List<Libro> findAllByTituloLike(String titulo);
 }

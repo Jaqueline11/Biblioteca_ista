@@ -38,4 +38,9 @@ public class LibroServiceImp implements ILibroService{
         libroDao.deleteById(id);
     }
 
+	@Override
+	public List<Libro> findAllByTituloLike(String titulo) {
+		return libroDao.findAllByTituloContaining(titulo);
+	}
+
 }

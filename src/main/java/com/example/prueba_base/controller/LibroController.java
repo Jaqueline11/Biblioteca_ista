@@ -70,6 +70,10 @@ public class LibroController {
     public void eliminar(@PathVariable int id){
         libroService.delete(id);
     }
-
+    
+    @GetMapping("/listarlibrosxnombre/{titulo}")
+    public List<Libro> librosxnombre(@PathVariable String titulo){
+        return libroService.findAllByTituloLike(titulo);
+    }
 
 }
