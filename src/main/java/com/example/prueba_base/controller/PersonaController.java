@@ -68,6 +68,18 @@ public class PersonaController {
 
     }
     
+    @GetMapping("/tipocliente_usu")
+    public Optional<Usuarios> tipoclienteusu(@RequestParam("id_persona") Integer id_persona, @RequestParam("rol")Integer rol){
+    	Persona pp= personaService.findById(id_persona);
+        return usu.findbyid_person(pp);
+    }
+    
+    @GetMapping("/tipocliente_bib")
+    public Optional<Bibliotecarios> tipoclientebib(@RequestParam("id_persona") Integer id_persona, @RequestParam("rol")Integer rol){
+    	Persona pp= personaService.findById(id_persona);
+        return bib.findbyid_person(pp);
+    }
+    
     @GetMapping("/num_rol")
     public int verificarrol(@RequestParam("usuario") String usuario) {
     	return personaService.rolpersona(usuario);
