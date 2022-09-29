@@ -49,6 +49,11 @@ public class AutorController {
     public void eliminar(@PathVariable int id){
         autorService.delete(id);
     }
+    
+    @GetMapping("/listarautorxnombre/{nombre}")
+    public List<Autor> autor_libro(@PathVariable String nombre){
+        return autorService.findAllByNombreContaining(nombre);
+    }
 
 
 }

@@ -44,4 +44,9 @@ public class AutorServiceImp implements IAutorService{
 		return autorDao.findByNombre(nombre);
 	}
 
+	@Override
+	public List<Autor> findAllByNombreContaining(String nombre) {
+		return autorDao.findAllByNombreContaining(nombre);
+	}
+
 }

@@ -39,6 +39,7 @@ public class LibroServiceImp implements ILibroService{
     }
 
 	@Override
+	@Transactional(readOnly = true)
 	public List<Libro> findAllByTituloLike(String titulo) {
 		return libroDao.findAllByTituloContaining(titulo);
 	}

@@ -1,7 +1,6 @@
 package com.example.prueba_base.services;
 
 import com.example.prueba_base.model.Autor;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 
@@ -16,4 +15,6 @@ public interface IAutorService {
     public void delete(Integer id);
     
     public Autor findByNombre(String nombre);
+    
+    public List<Autor> findAllByNombreContaining(String nombre);
 }
