@@ -55,6 +55,12 @@ public class PrestamoServiceImp implements IPrestamoService{
 	}
 
 
+	@Override
+	public List<Prestamo> findAllByEstado_prestamo(String estado_prestamo) {
+		return (List<Prestamo>) prestamoDao.findAllByEstado_prestamo(estado_prestamo);
+	}
+
+
 
 
 

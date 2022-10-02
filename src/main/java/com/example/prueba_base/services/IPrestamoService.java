@@ -11,6 +11,8 @@ public interface IPrestamoService {
     public List<Prestamo> findAll();
     
     public List<Prestamo> findAllByUsuario(Optional<Usuarios> u);
+    
+    public List<Prestamo> findAllByEstado_prestamo(String estado_prestamo);
 
     public Prestamo  save(Prestamo p);
     

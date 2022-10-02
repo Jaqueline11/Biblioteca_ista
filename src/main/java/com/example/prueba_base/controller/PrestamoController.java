@@ -85,4 +85,9 @@ public class PrestamoController {
 		return prestamoservice.findAllByUsuario(u);
 	}
 	
+	@GetMapping("/listarprestamoxestado/{estado_prestamo}")
+	public List<Prestamo> prestamoxestado(@PathVariable String estado_prestamo){
+		return prestamoservice.findAllByEstado_prestamo(estado_prestamo);
+	}
+	
 }
